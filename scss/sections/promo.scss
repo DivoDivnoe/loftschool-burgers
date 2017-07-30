@@ -1,0 +1,67 @@
+.promo {
+  background: url(../img/bg/promo-bg.jpg) no-repeat center;
+  background-size: cover;
+
+  &__heading {
+    margin-top: 51px;
+    /*margin-bottom: 64px;*/
+    font-family: $gagalin;
+    font-size: 72px;
+    line-height: 1.42em;
+    color: #2f3234;
+    text-align: center;
+  }
+
+  &-content {
+    display: flex;
+    align-items: center;
+    height: 40.95744681%;
+  }
+
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    position: relative;
+    width: 300px;
+    padding-top: 120px;
+    text-align: center;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 89px;
+      content: '';
+      background-size: cover;
+    }
+  }
+
+  &__meat::before {
+    background: url(../img/bg/promo-meat.png) center no-repeat;
+  }
+
+  &__handmade::before {
+    background: url(../img/bg/promo-hand.png) center no-repeat;
+  }
+
+  &__natural::before {
+    background: url(../img/bg/promo-natural.png) center no-repeat;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 17px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.17em;
+    font-family: $lifehack;
+  }
+
+  &__description {
+    line-height: 1.71em;
+  }
+}

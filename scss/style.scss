@@ -1,0 +1,16 @@
+//config
+@import "config/variables";
+@import "config/mixins";
+
+//layout
+@import "layout/fonts";
+@import "layout/base";
+
+//components
+@import "components/header";
+@import "components/section-switch";
+
+//sections
+@import "sections/banner";
+@import "sections/promo";
+@import "sections/reviews";

@@ -1,8 +1,402 @@
-@import "layout/base.css";
-@import "components/header.css";
-@import "components/section-switch.css";
+@font-face {
+  font-family: 'Lifehack';
+  src: url("../../fonts/lifehack_medium-webfont.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal; }
 
-/**sections**/
-@import "sections/banner.css";
-@import "sections/promo.css";
-@import "sections/reviews.css";
+@font-face {
+  font-family: 'Gagalin';
+  src: url("../../fonts/gagalin-regular-webfont.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url("../../fonts/Ubuntu/ubuntu-b-webfont.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url("../../fonts/Ubuntu/ubuntu-light-webfont.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url("../../fonts/Ubuntu/ubuntu-medium-webfont.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url("../../fonts/Ubuntu/ubuntu-regular-webfont.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal; }
+
+html,
+html::before,
+html::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit; }
+
+html,
+body {
+  width: 100%;
+  min-height: 100%; }
+
+body {
+  font-weight: 300;
+  font-family: Ubuntu, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42;
+  color: #2f3234; }
+
+.visuallyhidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden; }
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  min-width: 1100px;
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden; }
+
+.section {
+  background-color: rgba(0, 0, 0, 0.31);
+  min-height: 650px;
+  height: 100vh; }
+
+.section-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  width: 940px;
+  /*width: 85.454545454545%;*/
+  height: 100%; }
+
+.header {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 10px; }
+  .header__logo {
+    max-width: 100%; }
+  .header__btn-wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+
+.main-nav {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 640px;
+  font-weight: 500;
+  font-size: 13px;
+  /*width: 68.08510638%;*/ }
+  .main-nav__list {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 543px;
+    /*width: 84.84375%;*/ }
+  .main-nav__item {
+    position: relative; }
+    .main-nav__item::after {
+      position: absolute;
+      top: 7px;
+      right: -20px;
+      content: '';
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background-color: #ffffff; }
+    .main-nav__item:last-child::after {
+      display: none; }
+  .main-nav__link {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase; }
+    .main-nav__link:hover {
+      text-decoration: underline; }
+  .main-nav__btn {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    min-width: 6.0625rem;
+    min-height: 35px;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 5px;
+    -webkit-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease;
+    /*width: 15.15625%;*/
+    background-color: #c1401e; }
+    .main-nav__btn:hover {
+      background-color: #e45028; }
+
+.section-switch {
+  position: fixed;
+  top: 90px;
+  right: 48px; }
+  .section-switch__item {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 16px;
+    height: 16px;
+    margin-bottom: 5px;
+    border-radius: 50%;
+    cursor: pointer; }
+    .section-switch__item::after {
+      display: block;
+      margin: auto;
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: #ffffff; }
+    .section-switch__item--active {
+      border: 1px solid #ffffff; }
+
+.banner {
+  position: relative;
+  background: url(../img/bg/banner-bg.jpg) no-repeat center;
+  background-size: cover; }
+  .banner-item {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 64.61538462%; }
+    .banner-item__image-wrapper {
+      width: 50%;
+      text-align: right; }
+    .banner-item__text {
+      padding-top: 70px;
+      padding-left: 10px;
+      width: 50%;
+      font-size: 65px;
+      font-family: Lifehack, Helvetica, Arial, sans-serif;
+      color: #ffffff;
+      line-height: 1.1; }
+      .banner-item__text-top {
+        display: block;
+        margin-bottom: 16px;
+        font-family: Gagalin, Helvetica, Arial, sans-serif;
+        font-size: 72px;
+        line-height: 1.18;
+        color: #f9b43b; }
+
+.promo {
+  background: url(../img/bg/promo-bg.jpg) no-repeat center;
+  background-size: cover; }
+  .promo__heading {
+    margin-top: 51px;
+    /*margin-bottom: 64px;*/
+    font-family: Gagalin, Helvetica, Arial, sans-serif;
+    font-size: 72px;
+    line-height: 1.42em;
+    color: #2f3234;
+    text-align: center; }
+  .promo-content {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 40.95744681%; }
+  .promo-wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+  .promo__item {
+    position: relative;
+    width: 300px;
+    padding-top: 120px;
+    text-align: center; }
+    .promo__item::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 89px;
+      content: '';
+      background-size: cover; }
+  .promo__meat::before {
+    background: url(../img/bg/promo-meat.png) center no-repeat; }
+  .promo__handmade::before {
+    background: url(../img/bg/promo-hand.png) center no-repeat; }
+  .promo__natural::before {
+    background: url(../img/bg/promo-natural.png) center no-repeat; }
+  .promo__title {
+    margin-top: 0;
+    margin-bottom: 17px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.17em;
+    font-family: Lifehack, Helvetica, Arial, sans-serif; }
+  .promo__description {
+    line-height: 1.71em; }
+
+.reviews__list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  list-style: none; }
+
+.reviews__item {
+  width: 25%;
+  height: 50%;
+  background: center no-repeat;
+  background-size: cover;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  -webkit-transition: -webkit-filter 0.3s ease;
+  transition: -webkit-filter 0.3s ease;
+  -o-transition: filter 0.3s ease;
+  transition: filter 0.3s ease;
+  transition: filter 0.3s ease, -webkit-filter 0.3s ease; }
+  .reviews__item--1 {
+    background-image: url(../img/bg/review-1.jpg); }
+  .reviews__item--2 {
+    background-image: url(../img/bg/review-2.jpg); }
+  .reviews__item--3 {
+    background-image: url(../img/bg/review-3.jpg); }
+  .reviews__item--4 {
+    background-image: url(../img/bg/review-4.jpg); }
+  .reviews__item--5 {
+    background-image: url(../img/bg/review-5.jpg); }
+  .reviews__item--6 {
+    background-image: url(../img/bg/review-6.jpg); }
+  .reviews__item--7 {
+    background-image: url(../img/bg/review-7.jpg); }
+  .reviews__item--8 {
+    background-image: url(../img/bg/review-8.jpg); }
+  .reviews__item:hover {
+    -webkit-filter: none;
+    filter: none; }
+    .reviews__item:hover .reviews__item-hover {
+      background-color: rgba(20, 20, 20, 0.7);
+      opacity: 1; }
+  .reviews__item-hover {
+    height: 100%;
+    padding: 41px 30px 20px 20px;
+    opacity: 0;
+    color: #ffffff;
+    -webkit-transition: opacity 0.3s ease;
+    -o-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease; }
+
+.reviews__name {
+  font-family: Gagalin, Helvetica, Arial, sans-serif;
+  line-height: 2em; }
+
+.reviews__text {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  line-height: 1.75em; }
+
+.reviews__link {
+  padding: 12px 15px;
+  font-weight: 500;
+  font-size: 13px;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: #1f2122;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #ffffff;
+  cursor: pointer; }
+  .reviews__link:hover {
+    background-color: #2f3234; }

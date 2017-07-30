@@ -5,13 +5,13 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width">
   <title>Title</title>
-  <link rel="stylesheet" href="css/layout/normalize.css">
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <main class="wrapper">
-  <section class="banner burgers-section">
-    <div class="container">
+  <section class="banner section">
+    <div class="section-wrapper">
       <header class="header">
         <div class="header__logo-wrapper">
           <img class="header__logo" src="img/content/logo.png" alt="">
@@ -49,9 +49,11 @@
               </a>
             </li>
           </ul>
-          <a class="btn main-nav__btn" href="#">
-            Заказать
-          </a>
+          <div class="main-nav__btn-wrapper">
+            <a class="main-nav__btn" href="#">
+              Заказать
+            </a>
+          </div>
         </nav>
       </header>
       <div class="banner-item">
@@ -68,8 +70,8 @@
     </div>
 
   </section>
-  <section class="promo burgers-section">
-    <div class="container container--promo">
+  <section class="promo section">
+    <div class="section-wrapper">
       <h1 class="promo__heading">
         Мы лучшие
       </h1>
@@ -104,7 +106,7 @@
       </div>
     </div>
   </section>
-  <section class="reviews burgers-section">
+  <section class="reviews section">
     <ul class="reviews__list">
       <li class="reviews__item reviews__item--1">
         <div class="reviews__item-hover">

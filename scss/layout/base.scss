@@ -18,9 +18,32 @@ body {
 
 body {
   font-weight: 300;
-  font-family: Ubuntu, Arial, sans-serif;
+  font-family: Ubuntu, Helvetica, Arial, sans-serif;
   font-size: 14px;
-  line-height: 1.42em;
+  line-height: 1.42;
+  color: $grey;
+}
+
+.visuallyhidden:not(:focus):not(:active) {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .wrapper {
@@ -33,12 +56,13 @@ body {
   overflow: hidden;
 }
 
-.burgers-section {
+.section {
+  background-color: rgba(0, 0, 0, 0.31);
   min-height: 650px;
   height: 100vh;
 }
 
-.container {
+.section-wrapper {
   margin-left: auto;
   margin-right: auto;
   width: 940px;
