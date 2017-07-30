@@ -1,0 +1,95 @@
+.reviews__list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  list-style: none;
+}
+
+.reviews__item--1 {
+  background: url(../../img/bg/review-1.jpg) center 40% no-repeat;
+
+}
+
+.reviews__item--2 {
+  background: url(../../img/bg/review-2.jpg) center no-repeat;
+}
+
+.reviews__item--3 {
+  background: url(../../img/bg/review-3.jpg) center no-repeat;
+}
+
+.reviews__item--4 {
+  background: url(../../img/bg/review-4.jpg) center right no-repeat;
+}
+
+.reviews__item--5 {
+  background: url(../../img/bg/review-5.jpg) 0 top no-repeat;
+}
+
+.reviews__item--6 {
+  background: url(../../img/bg/review-6.jpg) 70% center no-repeat;
+}
+
+.reviews__item--7 {
+  background: url(../../img/bg/review-7.jpg) 35% center no-repeat;
+}
+
+.reviews__item--8 {
+  background: url(../../img/bg/review-8.jpg) 85% center no-repeat;
+}
+
+.reviews__item {
+  width: 25%;
+  height: 50%;
+  background-size: cover;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.reviews__item:hover {
+  filter: none;
+}
+
+.reviews__item:hover .reviews__item-hover {
+  background-color: rgba(20, 20, 20, 0.7);
+  opacity: 1;
+}
+
+.reviews__item-hover {
+  height: 100%;
+  padding: 41px 30px 20px 20px;
+  opacity: 0;
+  color: #ffffff;
+  transition: opacity 0.3s ease;
+}
+
+.reviews__name {
+  font-family: Gagalin, Arial, sans-serif;
+  line-height: 2em;
+}
+
+.reviews__text {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  line-height: 1.75em;
+}
+
+.reviews__link {
+  padding: 12px 15px;
+  font-weight: 500;
+  font-size: 13px;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: #1f2122;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.reviews__link:hover {
+  background-color: #2f3234;
+}
+
