@@ -1,0 +1,37 @@
+.banner {
+  position: relative;
+  background: url(../img/bg/banner-bg.jpg) no-repeat center;
+  background-size: cover;
+
+  &-item {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    height: 64.61538462%;
+
+    &__image-wrapper {
+      width: 50%;
+      text-align: right;
+    }
+
+    &__text {
+      padding-top: 70px;
+      padding-left: 10px;
+      width: 50%;
+      font-size: 65px;
+      font-family: $lifehack;
+      color: #ffffff;
+      line-height: 1.1;
+
+      &-top {
+        display: block;
+        margin-bottom: 16px;
+        font-family: $gagalin;
+        font-size: 72px;
+        line-height: 1.18;
+        color: $yellow;
+      }
+    }
+  }
+}
+
