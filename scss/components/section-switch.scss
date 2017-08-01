@@ -3,7 +3,7 @@
   top: 90px;
   right: 48px;
 
-  &__item {
+  .section-switch__item {
     display: flex;
     width: 16px;
     height: 16px;
@@ -18,7 +18,7 @@
       @include circle(6px, $white);
     }
 
-    &--active {
+    .section-switch__item--active {
       border: 1px solid #ffffff;
     }
   }

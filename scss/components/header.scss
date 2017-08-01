@@ -5,11 +5,11 @@
   align-items: center;
   padding-top: 10px;
 
-  &__logo {
+  .header__logo {
     max-width: 100%;
   }
 
-  &__btn-wrapper {
+  .header__btn-wrapper {
     display: flex;
   }
 }
@@ -23,7 +23,7 @@
   font-size: 13px;
   /*width: 68.08510638%;*/
 
-  &__list {
+  .main-nav__list {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -31,7 +31,7 @@
     /*width: 84.84375%;*/
   }
 
-  &__item {
+  .main-nav__item {
     position: relative;
 
     &::after {
@@ -47,7 +47,7 @@
     }
   }
 
-  &__link {
+  .main-nav__link {
     color: #ffffff;
     text-decoration: none;
     text-transform: uppercase;
@@ -57,7 +57,7 @@
     }
   }
 
-  &__btn {
+  .main-nav__btn {
     @include btn;
     /*width: 15.15625%;*/
     background-color: $darkRed;
