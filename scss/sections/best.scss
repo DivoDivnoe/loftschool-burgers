@@ -1,29 +1,30 @@
-.promo {
+.best {
   background: url(../img/bg/promo-bg.jpg) no-repeat center;
   background-size: cover;
 
-  &__heading {
+  .best__heading {
+    @extend %title;
     margin-top: 51px;
     /*margin-bottom: 64px;*/
-    font-family: $gagalin;
-    font-size: 72px;
     line-height: 1.42em;
     color: #2f3234;
     text-align: center;
   }
 
-  &-content {
+  .best__content {
     display: flex;
     align-items: center;
     height: 40.95744681%;
   }
+}
 
-  &-wrapper {
+.promo {
+  .promo__wrapper {
     display: flex;
     justify-content: space-between;
   }
 
-  &__item {
+  .promo__item {
     position: relative;
     width: 300px;
     padding-top: 120px;
@@ -38,21 +39,21 @@
       content: '';
       background-size: cover;
     }
+
+    .promo__item--meat::before {
+      background: url(../img/bg/promo-meat.png) center no-repeat;
+    }
+
+    .promo__item--handmade::before {
+      background: url(../img/bg/promo-hand.png) center no-repeat;
+    }
+
+    .promo__item--natural::before {
+      background: url(../img/bg/promo-natural.png) center no-repeat;
+    }
   }
 
-  &__meat::before {
-    background: url(../img/bg/promo-meat.png) center no-repeat;
-  }
-
-  &__handmade::before {
-    background: url(../img/bg/promo-hand.png) center no-repeat;
-  }
-
-  &__natural::before {
-    background: url(../img/bg/promo-natural.png) center no-repeat;
-  }
-
-  &__title {
+  .promo__title {
     margin-top: 0;
     margin-bottom: 17px;
     font-weight: 500;
@@ -61,7 +62,7 @@
     font-family: $lifehack;
   }
 
-  &__description {
+  .promo__description {
     line-height: 1.71em;
   }
 }

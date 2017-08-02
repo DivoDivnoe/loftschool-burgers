@@ -1,70 +1,70 @@
-.reviews {
-  &__list {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0;
-    margin: 0;
+.reviews__list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  list-style: none;
+}
+
+.reviews__item {
+  position: relative;
+  width: 25%;
+  height: 50%;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+
+  .reviews__item-image {
+    min-height: 100%;
+  }
+
+  .reviews__item-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    width: 100%;
     height: 100%;
-    list-style: none;
-  }
-
-  &__item {
-    width: 25%;
-    height: 50%;
-    background: center no-repeat;
-    background-size: cover;
-    filter: grayscale(100%);
-    transition: filter 0.3s ease;
-
-    @each $number in (1, 2, 3, 4, 5, 6, 7, 8) {
-      &--#{$number} {
-        background-image: url(../img/bg/review-#{$number}.jpg);
-      }
-    }
-
-    &:hover {
-      filter: none;
-
-      & .reviews__item-hover {
-        background-color: rgba(20, 20, 20, 0.7);
-        opacity: 1;
-      }
-    }
-
-    &-hover {
-      height: 100%;
-      padding: 41px 30px 20px 20px;
-      opacity: 0;
-      color: #ffffff;
-      transition: opacity 0.3s ease;
-    }
-  }
-
-  &__name {
-    font-family: $gagalin;
-    line-height: 2em;
-  }
-
-  &__text {
-    margin-top: 15px;
-    margin-bottom: 20px;
-    line-height: 1.75em;
-  }
-
-  &__link {
-    padding: 12px 15px;
-    font-weight: 500;
-    font-size: 13px;
-    text-transform: uppercase;
-    text-align: center;
-    background-color: #1f2122;
-    border-radius: 5px;
-    text-decoration: none;
+    padding: 41px 30px 20px 20px;
+    opacity: 0;
     color: #ffffff;
-    cursor: pointer;
+    transition: opacity 0.3s ease;
+  }
 
-    &:hover {
-      background-color: #2f3234;
+  &:hover {
+    filter: none;
+
+    & .reviews__item-hover {
+      background-color: rgba(20, 20, 20, 0.7);
+      opacity: 1;
     }
+  }
+}
+
+.reviews__name {
+  font-family: $gagalin;
+  line-height: 2em;
+}
+
+.reviews__text {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  line-height: 1.75em;
+}
+
+.reviews__link {
+  padding: 12px 15px;
+  font-weight: 500;
+  font-size: 13px;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: #1f2122;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #ffffff;
+  cursor: pointer;
+  
+  &:hover {
+    background-color: #2f3234;
   }
 }
