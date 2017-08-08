@@ -9,36 +9,31 @@
     max-width: 100%;
   }
 
-  .header__btn-wrapper {
+  .header__btns {
     display: flex;
   }
 }
 
 .main-nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  width: 640px;
+  margin-right: 15px;
   font-weight: 500;
   font-size: 13px;
-  /*width: 68.08510638%;*/
 
   .main-nav__list {
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    width: 543px;
-    /*width: 84.84375%;*/
   }
 
   .main-nav__item {
-    position: relative;
+    display: flex;
+    align-items: center;
 
     &::after {
-      position: absolute;
-      top: 7px;
-      right: -20px;
       content: '';
+      margin-left: 16px;
+      margin-right: 16px;
       @include circle(4px, $white);
     }
 
@@ -56,14 +51,8 @@
       text-decoration: underline;
     }
   }
+}
 
-  .main-nav__btn {
-    @include btn;
-    /*width: 15.15625%;*/
-    background-color: $darkRed;
-
-    &:hover {
-      background-color: $red;
-    }
-  }
+.main-nav__btn {
+  @include btn;
 }

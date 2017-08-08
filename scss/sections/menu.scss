@@ -1,0 +1,78 @@
+.menu {
+  position: relative;
+  background: $grey url('../img/bg/menu-bg.jpg') center no-repeat;
+  background-size: cover;
+}
+
+.menu__title {
+  display: flex;
+  align-items: center;
+  @include title($white);
+  height: 40%;
+  padding-left: 8.63636363%;
+}
+
+.menu-acco {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: flex; //width: 21.81818181%;
+}
+
+.menu-acco__item {
+  display: flex;
+  color: $white;
+  cursor: pointer;
+
+  &--active {
+    .menu-acco__content {
+      width: 540px;
+      overflow: auto;
+      background: rgba($grey, 0.93);
+    }
+  }
+}
+
+.menu-acco__content {
+    width: 0;
+    height: 100%;
+    line-height: 1.71;
+    overflow: hidden;
+
+    p {
+      margin: 0;
+      padding: 60px 35px;
+    }
+  }
+
+.menu-acco__heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+}
+
+.menu-acco__heading--meat {
+  background: #000000 url('../img/bg/menu_meat-bg.jpg') center no-repeat;
+  background-size: cover;
+}
+
+.menu-acco__heading--veg {
+  background: #000000 url('../img/bg/menu_veg-bg.jpg') center no-repeat;
+  background-size: cover;
+}
+
+.menu-acco__heading--diet {
+  background: #000000 url('../img/bg/menu_diet-bg.jpg') center no-repeat;
+  background-size: cover;
+}
+
+.menu-acco__title {
+  font-size: 40px;
+  line-height: 1.6;
+  font-family: $gagalin;
+  white-space: nowrap;
+  text-transform: uppercase;
+  transform: rotate(-90deg);
+}
