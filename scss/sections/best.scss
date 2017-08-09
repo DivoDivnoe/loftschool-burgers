@@ -1,34 +1,44 @@
 .best {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   background: url(../img/bg/promo-bg.jpg) no-repeat center;
   background-size: cover;
+
+  .best__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 69%;
+  }
 
   .best__heading {
     @include title($grey);
     margin-top: 51px;
-    /*margin-bottom: 64px;*/
+    margin-bottom: 64px;
     line-height: 1.42em;
     text-align: center;
   }
 
   .best__content {
     display: flex;
-    align-items: center;
-    flex-wrap: nowrap;
+    justify-content: space-between
   }
 }
 
 .promo {
   .promo__item {
+    margin-right: 17px;
     flex: 1;
-    margin: 0 15px;
     text-align: center;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
   .promo__pic {
+    display: flex;
+    align-items: center;
     height: 90px;
+    margin-bottom: 30px;
   }
 
   .promo__icon {
@@ -44,6 +54,7 @@
     }
 
     &--natural {
+      height: 75px;
       fill: $green;
     }
   }

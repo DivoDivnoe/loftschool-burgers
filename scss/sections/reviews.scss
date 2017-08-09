@@ -41,7 +41,13 @@
   }
 
   .reviews__hover-content {
-    width: 80%;
+    width: 85%;
+
+    p {
+      margin-top: 15px;
+      margin-bottom: 10px;
+      line-height: 1.75em;
+    }
   }
 
   &:hover {
@@ -57,12 +63,6 @@
 .reviews__name {
   font-family: $gagalin;
   line-height: 2em;
-}
-
-.reviews__text {
-  margin-top: 15px;
-  margin-bottom: 20px;
-  line-height: 1.75em;
 }
 
 .reviews__link {

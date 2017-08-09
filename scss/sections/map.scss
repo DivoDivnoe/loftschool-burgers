@@ -5,12 +5,12 @@
 
 .map__image {
   flex: 1;
-  background: url('../img/bg/map.jpg') center no-repeat;
+  background: url('../img/bg/map.jpg') center top no-repeat;
   background-size: cover;
 }
 
 .footer {
-  padding: 10px 0;
+  padding: 9px 0;
   background: #000000 url('../img/bg/footer-bg.jpg') center no-repeat;
   background-size: cover;
 }
@@ -23,7 +23,7 @@
 }
 
 .footer__left-address {
-  margin-bottom: 10px;
+  margin-bottom: 3px;
   color: $white;
 }
 

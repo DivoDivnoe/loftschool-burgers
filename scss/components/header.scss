@@ -3,7 +3,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 10px;
+
+  .header__logo-wrapper {
+    margin-top: 13px;
+  }
 
   .header__logo {
     max-width: 100%;

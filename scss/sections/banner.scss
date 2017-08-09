@@ -4,7 +4,9 @@
   background-size: cover;
 
   .banner__wrapper {
-    height: 80%;
+    display: flex;
+    flex-direction: column;
+    height: 76%;
   }
 
   .banner-item {
@@ -29,7 +31,7 @@
       font-size: 65px;
       font-family: $lifehack;
       color: #ffffff;
-      line-height: 1.1;
+      line-height: 1;
 
       .banner-item__text-top {
         @include title;
@@ -43,7 +45,7 @@
 
   .banner__arrow {
     position: absolute;
-    bottom: 7%;
+    bottom: 6%;
     left: 0;
     right: 0;
     margin-left: auto;

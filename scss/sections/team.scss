@@ -1,6 +1,6 @@
 .team {
   position: relative;
-  background: url('../img/bg/team-bg.jpg') no-repeat center;
+  background: url('../img/bg/team-bg.jpg') no-repeat center top;
   background-size: cover;
 
   .team__section {
@@ -8,19 +8,23 @@
     top: 0;
     right: 0;
     display: flex;
-    align-items: center;
     justify-content: center;
     width: 49.09090909%;
     height: 100%;
     background-color: rgba($grey, 0.93);
   }
 
-  .team__content {
-    width: 80%;
+  .team__content-wrapper {
+    width: 71%;
+    height: 93%;
+    display: flex;
+    align-items: center;
   }
 
   .team__title {
     @include title;
+    margin-top: 0;
+    margin-bottom: 50px;
   }
 
   .team-acco {
@@ -30,7 +34,7 @@
   .team-acco__item {
     display: flex;
     flex-direction: column;
-    margin-bottom: 10px;
+    margin-bottom: 6px;
 
     &--active {
       .team-acco__title {
@@ -43,6 +47,7 @@
 
       .team-acco__content {
         height: auto;
+        margin-bottom: 5px;
         overflow: auto;
       }
     }
@@ -91,6 +96,7 @@
   }
 
   .team-acco__desc {
+    padding: 0 5px;
     color: $white;
   }
 
