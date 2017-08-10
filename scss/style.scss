@@ -1,6 +1,7 @@
 //config
 @import "config/variables";
 @import "config/mixins";
+@import "config/media";
 
 //layout
 @import "layout/fonts";
@@ -9,6 +10,7 @@
 //components
 @import "components/header";
 @import "components/section-switch";
+@import "components/footer";
 
 //sections
 @import "sections/banner";

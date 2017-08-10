@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Title</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
@@ -42,6 +42,11 @@
               </ul>
             </nav>
             <a class="main-nav__btn" href="#">Заказать</a>
+            <div class="main-nav__hamburger">
+              <span class="main-nav__hamburger-line"></span>
+              <span class="main-nav__hamburger-line"></span>
+              <span class="main-nav__hamburger-line"></span>
+            </div>
           </div>
         </header>
         <div class="banner-item">
@@ -74,14 +79,17 @@
                 </use>
               </svg>
             </div>
-            <h2 class="promo__title">
-              100% свежее мясо
-            </h2>
-            <div class="promo__description">
-              <p>
-                Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.
-              </p>
+            <div class="promo__content">
+              <h2 class="promo__title">
+                100% свежее мясо
+              </h2>
+              <div class="promo__description">
+                <p>
+                  Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.
+                </p>
+              </div>
             </div>
+
           </div>
           <div class="promo__item promo__item--handmade">
             <div class="promo__pic">
@@ -91,14 +99,17 @@
                 </use>
               </svg>
             </div>
-            <h2 class="promo__title">
-              Ручная сборка
-            </h2>
-            <div class="promo__description">
-              <p>
-                Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.
-              </p>
+            <div class="promo__content">
+              <h2 class="promo__title">
+                Ручная сборка
+              </h2>
+              <div class="promo__description">
+                <p>
+                  Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.
+                </p>
+              </div>
             </div>
+
           </div>
           <div class="promo__item promo__item--natural">
             <div class="promo__pic">
@@ -108,14 +119,17 @@
                 </use>
               </svg>
             </div>
-            <h2 class="promo__title">
-              Натуральные ингредиенты
-            </h2>
-            <div class="promo__description">
-              <p>
-                Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.
-              </p>
+            <div class="promo__content">
+              <h2 class="promo__title">
+                Натуральные ингредиенты
+              </h2>
+              <div class="promo__description">
+                <p>
+                  Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.
+                </p>
+              </div>
             </div>
+
           </div>
         </div>
       </div>
@@ -239,6 +253,7 @@
               Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.
 
             </p>
+            <a href="#" class="menu-acco__close"></a>
           </div>
         </div>
         <div class="menu-acco__item menu-acco__item--veg">
@@ -255,6 +270,7 @@
               Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.
 
             </p>
+            <a href="#" class="menu-acco__close"></a>
           </div>
         </div>
         <div class="menu-acco__item menu-acco__item--diet">
@@ -271,6 +287,7 @@
               Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.
 
             </p>
+            <a href="#" class="menu-acco__close"></a>
           </div>
         </div>
       </div>
@@ -428,6 +445,8 @@
                 <div class="form__texarea-wrapper">
                   <label class="form__input-lable" for="comments">Комментарии</label>
                   <textarea class="form__textarea" id="comments"></textarea>
+                </div>
+                <div class="form__bottom">
                   <div class="form__radios">
                     <label class="form__radio-label form__label">
                       <input class="form__radio" type="radio" name="pay" value="short-change">Потребуется сдача
@@ -438,19 +457,18 @@
                       <span class="form__radio-indicator"></span>
                     </label>
                   </div>
-
-
+                  <label class="form__checkbox-label form__label">
+                    <input class="form__checkbox" type="checkbox" name="callback" value="yes" checked>Не перезванивать
+                    <svg class="form__checkbox-tick">
+                      <polyline points="3,6 7,10 13,3"></polyline>
+                    </svg>
+                  </label>
+                  <div class="form__buttons">
+                    <button class="form__submit" type="submit">Заказать</button>
+                    <a class="form__clear" href="#">Очистить</a>
+                  </div>
                 </div>
-                <label class="form__checkbox-label form__label">
-                  <input class="form__checkbox" type="checkbox" name="callback" value="yes" checked>Не перезванивать
-                  <svg class="form__checkbox-tick">
-                    <polyline points="3,6 7,10 13,3"></polyline>
-                  </svg>
-                </label>
-                <div class="form__buttons">
-                  <button class="form__submit" type="submit">Заказать</button>
-                  <a class="form__clear" href="#">Очистить</a>
-                </div>
+
               </div>
             </div>
           </form>
@@ -463,7 +481,7 @@
       </div>
       <footer class="footer">
         <div class="section__wrapper footer__container">
-          <div class="footer__left">
+          <div class="footer__left footer__column">
             <div class="footer__left-address">
               Санкт-Петербург, ул.Бабушкина, д.12/1, 15
             </div>
@@ -475,8 +493,9 @@
                 +7 (812) 377-13-77</a>
             </div>
           </div>
-          <div class="footer__right">
-            <a class="footer__right-link" href="#">
+          <div class="footer__right footer__column">
+            <div class="footer__right-socials">
+              <a class="footer__right-link" href="#">
               <svg class="footer__right-social">
                 <use xlink:href="img/icons/sprite.svg#vk"></use>
               </svg>
@@ -496,6 +515,7 @@
                 <use xlink:href="img/icons/sprite.svg#twitter"></use>
               </svg>
             </a>
+            </div>
           </div>
         </div>
       </footer>

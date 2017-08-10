@@ -1,23 +1,27 @@
 .section-switch {
   position: fixed;
-  top: 90px;
-  right: 48px;
+  top: rem(90px);
+  right: rem(48px);
+
+  @include tablets {
+    display: none;
+  }
 }
 
 .section-switch__item {
   display: flex;
-  width: 16px;
-  height: 16px;
-  margin-bottom: 5px;
-  border: 1px solid transparent;
+  width: rem(16px);
+  height: rem(16px);
+  margin-bottom: rem(5px);
+  border: rem(1px) solid transparent;
   border-radius: 50%;
   cursor: pointer;
-
+  
   &::after {
     display: block;
     margin: auto;
     content: '';
-    @include circle(6px, $white);
+    @include circle(rem(6px), $white);
   }
   
   &--active, &:hover {

@@ -2,109 +2,156 @@
   position: relative;
   background: url('../img/bg/team-bg.jpg') no-repeat center top;
   background-size: cover;
+}
 
-  .team__section {
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    width: 49.09090909%;
-    height: 100%;
-    background-color: rgba($grey, 0.93);
+.team__section {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  width: 49.09090909%;
+  height: 100%;
+  background-color: rgba($grey, 0.93);
+
+  @include tablets {
+    width: 100%;
+  }
+}
+
+.team__content-wrapper {
+  width: 71%;
+  height: 93%;
+  display: flex;
+  align-items: center;
+
+  @include tablets {
+    width: 47%;
   }
 
-  .team__content-wrapper {
-    width: 71%;
-    height: 93%;
-    display: flex;
+  @include phones {
+    width: 66%;
+  }
+}
+
+.team__title {
+  @include title;
+  margin-top: 0;
+  margin-bottom: rem(50px);
+
+  @include tablets {
+    text-align: center;
+  }
+
+  @include phones {
+    font-size: 50px;
+  }
+}
+
+.team-acco {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.team-acco__item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: rem(6px);
+
+  @include tablets {
     align-items: center;
   }
+  &--active {
+    .team-acco__title {
+      color: $yellow;
 
-  .team__title {
-    @include title;
-    margin-top: 0;
-    margin-bottom: 50px;
-  }
-
-  .team-acco {
-    flex: 1;
-  }
-
-  .team-acco__item {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 6px;
-
-    &--active {
-      .team-acco__title {
-        color: $yellow;
-
-        &::before {
-          transform: rotate(180deg);
-        }
+      &::before {
+        transform: rotate(180deg);
       }
+    }
 
-      .team-acco__content {
-        height: auto;
-        margin-bottom: 5px;
-        overflow: auto;
+    .team-acco__content {
+      height: auto;
+      margin-bottom: rem(5px);
+      overflow: auto;
+
+      @include tablets {
+        flex-direction: column;
       }
     }
   }
-  .team-acco__title {
-    display: flex;
-    align-items: center;
-    line-height: 2;
-    font-family: $gagalin;
-    color: $white;
-    text-transform: uppercase;
+}
 
-    &::before {
-      width: 0;
-      height: 0;
-      margin-right: 10px;
-      border: 5px solid transparent;
-      border-top-color: $yellow;
-      border-bottom: none;
-      content: '';
-    }
+.team-acco__title {
+  display: flex;
+  align-items: center;
+  line-height: 2;
+  font-family: $gagalin;
+  color: $white;
+  text-transform: uppercase;
+
+  @include tablets {
+    font-size: 24px;
   }
 
-  .team-acco__content {
-    display: flex;
+  &::before {
+    width: 0;
     height: 0;
-    margin-top: 15px;
-    overflow: hidden;
+    margin-right: rem(10px);
+    border: rem(5px) solid transparent;
+    border-top-color: $yellow;
+    border-bottom: none;
+    content: '';
   }
+}
 
-  .team-acco__avatar {
-    position: relative;
-    width: 100px;
-    height: 100px;
-    margin: 0 17px;
-    border-radius: 50%;
-    overflow: hidden;
-  }
+.team-acco__content {
+  display: flex;
+  height: 0;
+  margin-top: rem(15px);
+  overflow: hidden;
 
-  .team-acco__pic {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    height: 100%;
-    transform: translate(-50%, -50%);
+  @include tablets {
+    text-align: center;
   }
+}
 
-  .team-acco__desc {
-    padding: 0 5px;
-    color: $white;
+.team-acco__image {
+  display: flex;
+  justify-content: center;
+  
+  @include tablets {
+    margin-bottom: 20px;
   }
+}
 
-  .team-acco__desc-title {
-    font-weight: bold;
-  }
+.team-acco__avatar {
+  position: relative;
+  width: rem(100px);
+  height: rem(100px);
+  margin: 0 rem(17px);
+  border-radius: 50%;
+  overflow: hidden;
+}
 
-  .team-acco__desc-text p {
-    line-height: calc(24 / 14);
-  }
+.team-acco__pic {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+}
+
+.team-acco__desc {
+  padding: 0 rem(5px);
+  color: $white;
+}
+
+.team-acco__desc-title {
+  font-weight: bold;
+}
+
+.team-acco__desc-text p {
+  line-height: calc(24 / 14);
 }

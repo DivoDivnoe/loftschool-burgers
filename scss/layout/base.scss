@@ -11,18 +11,28 @@ html, body {
   min-height: 100%;
 }
 
+html {
+  @include tablets {
+    font-size: 15px;
+  }
+  
+  @include phones {
+    font-size: 14px;
+  }
+}
+
 body {
   @include ubuntu;
-  font-size: 14px;
+  font-size: rem(14px);
   line-height: 1.42;
   color: $grey;
 }
 
 .visuallyhidden:not(:focus):not(:active) {
   position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
+  width: rem(1px);
+  height: rem(1px);
+  margin: -rem(1px);
   padding: 0;
   border: 0;
   white-space: nowrap;
@@ -41,22 +51,22 @@ ul {
   display: flex;
   flex-direction: column;
   position: relative;
-  min-width: 960px;
   width: 100%;
   min-height: 100%;
   overflow: hidden;
 }
 
 .section {
+  width: 100%;
   background-color: rgba(0, 0, 0, 0.31);
-  min-height: 650px;
+  min-height: rem(650px);
   height: 100vh;
 }
 
 .section__wrapper {
-    margin-left: auto;
-    margin-right: auto;
-    width: 940px;
-    /*width: 85.454545454545%;*/
-    height: 100%;
-  }
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+  max-width: 940px;
+  height: 100%;
+}

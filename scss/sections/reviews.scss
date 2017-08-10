@@ -21,9 +21,15 @@
   filter: grayscale(100%);
   transition: filter 0.3s ease;
 
+  @include tablets {
+    width: 50%;
+    height: 25%;
+    text-align: center;
+  }
+
   .reviews__item-image {
     position: absolute;
-    top: -99999px;
+    top: 99999px;
   }
 
   .reviews__hover {
@@ -37,6 +43,7 @@
     align-items: center;
     opacity: 0;
     color: #ffffff;
+    background-color: rgba(20, 20, 20, 0.7);
     transition: opacity 0.3s ease;
   }
 
@@ -44,8 +51,8 @@
     width: 85%;
 
     p {
-      margin-top: 15px;
-      margin-bottom: 10px;
+      margin-top: rem(15px);
+      margin-bottom: rem(10px);
       line-height: 1.75em;
     }
   }
@@ -54,8 +61,11 @@
     filter: none;
 
     .reviews__hover {
-      background-color: rgba(20, 20, 20, 0.7);
       opacity: 1;
+
+      @include phones {
+        opacity: 0;
+      }
     }
   }
 }

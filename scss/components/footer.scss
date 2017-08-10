@@ -1,0 +1,87 @@
+.footer {
+  padding: rem(9px) 0;
+  background: #000000 url('../img/bg/footer-bg.jpg') center no-repeat;
+  background-size: cover;
+
+  @include phones {
+    padding: 18px 0;
+  }
+}
+
+.footer__container {
+  display: flex;
+
+  @include phones {
+    flex-direction: column;
+  }
+}
+
+.footer__column {
+  display: flex;
+  flex: 1;
+}
+
+.footer__left {
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  @include phones {
+    align-items: center;
+    margin-bottom: 18px;
+  }
+}
+
+.footer__right {
+  justify-content: flex-end;
+  align-items: center;
+
+  @include phones {
+    justify-content: center;
+  }
+}
+
+.footer__left-address {
+  margin-bottom: rem(3px);
+  color: $white;
+}
+
+.footer__left-link {
+  display: flex;
+  align-items: center;
+  color: $red;
+  text-decoration: none;
+}
+
+.footer__left-icon {
+  height: rem(11px);
+  width: rem(12px);
+  margin-right: rem(10px);
+  fill: $red;
+}
+
+.footer__right-socials {
+  display: flex;
+  height: rem(20px);
+}
+
+.footer__right-link {
+  height: 100%;
+  margin-right: 20px;
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.footer__right-social {
+  display: inline-flex;
+  height: 100%;
+  width: 23px;
+  fill: $white;
+  fill-opacity: 0.3;
+
+  &:hover {
+    fill-opacity: 1;
+  }
+}
