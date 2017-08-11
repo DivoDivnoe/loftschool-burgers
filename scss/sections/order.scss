@@ -141,35 +141,38 @@
 
 .form__checkbox-label {
   margin-bottom: rem(20px);
+}
 
-  &::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: rem(15px);
-    height: rem(15px);
-    background: $white;
-    content: '';
-  }
+.form__checkbox-field {
+  width: rem(15px);
+  height: rem(15px);
+  fill: $white;
+  stroke: none;
+}
+
+.form__checkbox-tick {
+  fill: none;
+  stroke: $red;
+  stroke-width: rem(3px);
+  opacity: 0;
 }
 
 .form__checkbox {
   display: none;
 
-  &:checked + .form__checkbox-tick {
-      top: 0;
+  &:checked + .form__checkbox-indicator {
+    .form__checkbox-tick {
+      opacity: 1;
     }
+  }
 }
 
-.form__checkbox-tick {
+.form__checkbox-indicator {
   position: absolute;
-  top: -rem(9999px);;
+  top: 0;
   left: 0;
   width: rem(15px);
   height: rem(15px);
-  fill: none;
-  stroke: $red;
-  stroke-width: rem(3px);
 }
 
 .form__submit {
