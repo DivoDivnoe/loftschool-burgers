@@ -47,6 +47,10 @@
     padding-top: rem(30px);
     text-align: center;
   }
+
+  @include phones {
+    width: 100%;
+  }
 }
 
 .banner-item__text-top {
