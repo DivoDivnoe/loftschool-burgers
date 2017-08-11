@@ -17,7 +17,11 @@ html {
   }
   
   @include phones {
-    font-size: 14px;
+    font-size: 13px;
+  }
+
+  @include small-phones {
+    font-size: 11px;
   }
 }
 

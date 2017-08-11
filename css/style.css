@@ -52,7 +52,11 @@ html, body {
 
 @media screen and (max-width: 480px) {
   html {
-    font-size: 14px; } }
+    font-size: 13px; } }
+
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 11px; } }
 
 body {
   font-family: Ubuntu, Helvetica, Arial, sans-serif;
@@ -454,6 +458,9 @@ ul {
       width: 85%;
       padding-top: 1.875rem;
       text-align: center; } }
+  @media screen and (max-width: 480px) {
+    .banner-item__text {
+      width: 100%; } }
 
 .banner-item__text-top {
   font-family: Gagalin, Helvetica, Arial, sans-serif;
@@ -494,7 +501,7 @@ ul {
   height: 69%; }
   @media screen and (max-width: 480px) {
     .best__wrapper {
-      height: 80%; } }
+      height: 90%; } }
 
 .best__heading {
   font-family: Gagalin, Helvetica, Arial, sans-serif;
