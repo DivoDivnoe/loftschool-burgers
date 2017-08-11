@@ -1207,29 +1207,30 @@ ul {
 
 .form__checkbox-label {
   margin-bottom: 1.25rem; }
-  .form__checkbox-label::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0.9375rem;
-    height: 0.9375rem;
-    background: #ffffff;
-    content: ''; }
+
+.form__checkbox-field {
+  width: 0.9375rem;
+  height: 0.9375rem;
+  fill: #ffffff;
+  stroke: none; }
+
+.form__checkbox-tick {
+  fill: none;
+  stroke: #e45028;
+  stroke-width: 0.1875rem;
+  opacity: 0; }
 
 .form__checkbox {
   display: none; }
-  .form__checkbox:checked + .form__checkbox-tick {
-    top: 0; }
+  .form__checkbox:checked + .form__checkbox-indicator .form__checkbox-tick {
+    opacity: 1; }
 
-.form__checkbox-tick {
+.form__checkbox-indicator {
   position: absolute;
-  top: -rem(9999px);
+  top: 0;
   left: 0;
   width: 0.9375rem;
-  height: 0.9375rem;
-  fill: none;
-  stroke: #e45028;
-  stroke-width: 0.1875rem; }
+  height: 0.9375rem; }
 
 .form__submit {
   display: -webkit-inline-box;
