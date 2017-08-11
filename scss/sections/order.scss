@@ -150,18 +150,11 @@
   stroke: none;
 }
 
-.form__checkbox-tick {
-  fill: none;
-  stroke: $red;
-  stroke-width: rem(3px);
-  opacity: 0;
-}
-
 .form__checkbox {
   display: none;
 
   &:checked + .form__checkbox-indicator {
-    .form__checkbox-tick {
+    &::before, &::after {
       opacity: 1;
     }
   }
@@ -173,6 +166,29 @@
   left: 0;
   width: rem(15px);
   height: rem(15px);
+  background-color: $white;
+
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    bottom: rem(2px);
+    display: block;
+    width: rem(3px);
+    background-color: $red;
+    opacity: 0;
+  }
+
+  &::before {
+    left: rem(5px);
+    height: rem(7px);
+    transform: rotate(-30deg)
+  }
+
+  &::after {
+    left: rem(8px);
+    height: rem(10px);
+    transform: rotate(35deg);
+  }
 }
 
 .form__submit {
