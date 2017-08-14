@@ -214,13 +214,13 @@ ul {
   color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
-  background-color: #c1401e;
+  background-color: #e45028;
   border-radius: 0.3125rem;
   -webkit-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease; }
   .main-nav__btn:hover {
-    background-color: #e45028; }
+    background-color: #c1401e; }
 
 .main-nav__hamburger {
   display: none;
@@ -1273,20 +1273,49 @@ ul {
   color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
-  background-color: #c1401e;
+  background-color: #e45028;
   border-radius: 0.3125rem;
   -webkit-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  margin-right: 1.25rem;
   border: none;
   cursor: pointer; }
   .form__submit:hover {
-    background-color: #e45028; }
+    background-color: #c1401e; }
 
 .form__clear {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0.5rem 0.9375rem;
+  font-weight: 500;
+  font-size: 0.8125rem;
   color: #ffffff;
-  text-decoration: none; }
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: transparent;
+  border-radius: 0.3125rem;
+  -webkit-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+  font-weight: 300;
+  font-size: 14px;
+  color: #ffffff;
+  border: none;
+  text-transform: none;
+  text-decoration: none;
+  cursor: pointer; }
+  .form__clear:hover {
+    background-color: transparent; }
 
 .map {
   display: -webkit-box;
