@@ -1,0 +1,10 @@
+.map {
+  display: flex;
+  flex-direction: column;
+}
+
+.map__image {
+  flex: 1;
+  background: url('../img/bg/map.jpg') center top no-repeat;
+  background-size: cover;
+}

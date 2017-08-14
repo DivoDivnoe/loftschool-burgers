@@ -1,0 +1,157 @@
+.team {
+  position: relative;
+  background: url('../img/bg/team-bg.jpg') no-repeat center top;
+  background-size: cover;
+}
+
+.team__section {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  width: 49.09090909%;
+  height: 100%;
+  background-color: rgba($grey, 0.93);
+
+  @include tablets {
+    width: 100%;
+  }
+}
+
+.team__content-wrapper {
+  width: 71%;
+  height: 93%;
+  display: flex;
+  align-items: center;
+
+  @include tablets {
+    width: 47%;
+  }
+
+  @include phones {
+    width: 66%;
+  }
+}
+
+.team__title {
+  @include title;
+  margin-top: 0;
+  margin-bottom: rem(50px);
+
+  @include tablets {
+    text-align: center;
+  }
+
+  @include phones {
+    font-size: 50px;
+  }
+}
+
+.team-acco {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.team-acco__item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: rem(6px);
+
+  @include tablets {
+    align-items: center;
+  }
+  &--active {
+    .team-acco__title {
+      color: $yellow;
+
+      &::before {
+        transform: rotate(180deg);
+      }
+    }
+
+    .team-acco__content {
+      height: auto;
+      margin-bottom: rem(5px);
+      overflow: auto;
+
+      @include tablets {
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+.team-acco__title {
+  display: flex;
+  align-items: center;
+  line-height: 2;
+  font-family: $gagalin;
+  color: $white;
+  text-transform: uppercase;
+
+  @include tablets {
+    font-size: 24px;
+  }
+
+  &::before {
+    width: 0;
+    height: 0;
+    margin-right: rem(10px);
+    border: rem(5px) solid transparent;
+    border-top-color: $yellow;
+    border-bottom: none;
+    content: '';
+  }
+}
+
+.team-acco__content {
+  display: flex;
+  height: 0;
+  margin-top: rem(15px);
+  overflow: hidden;
+
+  @include tablets {
+    text-align: center;
+  }
+}
+
+.team-acco__image {
+  display: flex;
+  justify-content: center;
+  
+  @include tablets {
+    margin-bottom: 20px;
+  }
+}
+
+.team-acco__avatar {
+  position: relative;
+  width: rem(100px);
+  height: rem(100px);
+  margin: 0 rem(17px);
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.team-acco__pic {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+}
+
+.team-acco__desc {
+  padding: 0 rem(5px);
+  color: $white;
+}
+
+.team-acco__desc-title {
+  font-weight: bold;
+}
+
+.team-acco__desc-text p {
+  line-height: calc(24 / 14);
+}

@@ -5,24 +5,68 @@
   background-color: $color;
 }
 
-@function rem($px) {
-  @return $px / 16px + 0rem;
-}
-
-@mixin btn {
-  display: flex;
+@mixin btn($color: $red, $hover: $darkRed) {
+  display: inline-flex;
   justify-content: center;
   align-items: center;
-  min-width: rem(97px);
-  min-height: 35px;
+  padding: rem(8px) rem(15px);
+  font-weight: 500;
+  font-size: rem(13px);
   color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
-  border-radius: 5px;
+  background-color: $color;
+  border-radius: rem(5px);
   transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $hover;
+  }
 }
 
-%title {
+@mixin title($color: $yellow) {
   font-family: $gagalin;
-  font-size: 72px;
+  font-size: rem(72px);
+  color: $color;
+}
+
+@mixin ubuntu($style: light) {
+  font-family: Ubuntu, Helvetica, Arial, sans-serif;
+
+  @if $style == light {
+    font-weight: 300;
+  }
+
+  @if $style == medium {
+    font-weight: 500;
+  }
+
+  @if $style == bold {
+    font-weight: 700;
+  }
+}
+
+@mixin placecolor($color: #000000) {
+	&::-webkit-input-placeholder {
+		color: $color;
+	}
+	&:-moz-placeholder {
+		color: $color;
+	}
+	&::-moz-placeholder {
+		color: $color;
+	}
+	&:-ms-input-placeholder {
+		color: $color;
+	}
+}
+
+@mixin vertical-gradient($top-color: #ffffff, $bottom-color: #000000) {
+	background-color: $top-color;
+	background-image: -webkit-gradient(linear, left top, left bottom, from($top-color), to($bottom-color)); /* Chrome, Safari 4+ */
+	background-image: -webkit-linear-gradient(top, $top-color, $bottom-color); /* Chrome 10-25, iOS 5+, Safari 5.1+ */
+	background-image: -moz-linear-gradient(top, $top-color, $bottom-color); /* Firefox 3.6-15 */
+	background-image: -o-linear-gradient(top, $top-color, $bottom-color); /* Opera 11.10-12.00 */
+	background-image: linear-gradient(to bottom, $top-color, $bottom-color); /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr=$top-color, EndColorStr=$bottom-color);
 }
