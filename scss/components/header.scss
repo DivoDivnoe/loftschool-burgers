@@ -71,6 +71,7 @@
   justify-content: space-between;
   width: rem(24px);
   height: rem(24px);
+  cursor: pointer;
 
   @include tablets {
     display: flex;

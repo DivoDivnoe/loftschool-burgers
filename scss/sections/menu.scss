@@ -64,35 +64,10 @@
 }
 
 .menu-acco__close {
-  position: absolute;
-  top: 26px;
-  right: 26px;
-  display: none;
-  width: 20px;
-  height: 20px;
-
-  &::before, &::after {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    height: 20px;
-    width: 3px;
-    border-radius: 3px;
-    background-color: #c1c2c2;
-    transform: translate(-50%);
-    transform-origin: center;
-    content: '';
-  }
+  @include close(26px, 26px, 20px, 3px);
   
   @include phones {
     display: block;
-    
-    &::before {
-      transform: rotate(45deg);
-    }
-    &::after {
-      transform: rotate(-45deg);
-    }
   }
 }
 

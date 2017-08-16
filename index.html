@@ -8,6 +8,10 @@
   <title>Title</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -42,7 +46,7 @@
               </ul>
             </nav>
             <a class="main-nav__btn" href="#">Заказать</a>
-            <div class="main-nav__hamburger">
+            <div class="main-nav__hamburger" tabindex="0">
               <span class="main-nav__hamburger-line"></span>
               <span class="main-nav__hamburger-line"></span>
               <span class="main-nav__hamburger-line"></span>
@@ -131,6 +135,55 @@
             </div>
 
           </div>
+        </div>
+      </div>
+    </section>
+    <section class="slider section">
+      <div class="section__wrapper slider__wrapper">
+        <div class="slider__content">
+          <div class="slider__column slider__column--left">
+            <div class="slider__structure">
+              <div class="slider__structure-content">
+                <svg class="slider__structure-icon">
+                  <use xlink:href="img/icons/sprite.svg#burger"></use>
+                </svg>
+                Состав
+              </div>
+            </div>
+            <div class="slider__image">
+              <img class="slider__pic" src="img/content/burger-slider.png" alt="hit" class="slider__pic">
+            </div>
+            <div class="slider__kalories">
+              <svg class="slider__kalories-icon">
+                <use xlink:href="img/icons/sprite.svg#kkal"></use>
+              </svg>
+              <span class="slider__kalories-number">1200</span> ккал
+            </div>
+          </div>
+          <div class="slider__column slider__column--right">
+            <div class="slider__title">
+              Dark BEEF Burger
+            </div>
+            <div class="slider__text">
+              <p>
+                Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
+              </p>
+            </div>
+            <div class="slider__bottom">
+              <div class="slider__price">
+                <span class="slider__price-number">500</span> рублей
+              </div>
+              <a href="#" class="slider__btn">
+                Заказать
+              </a>
+            </div>
+          </div>
+          <svg class="slider__arrow slider__arrow--left">
+            <polyline points="14,0  0,15 14,29" stroke="#ffffff" stroke-width="2" stroke-linejoin="round" fill="none" />
+          </svg>
+          <svg class="slider__arrow slider__arrow--right">
+            <polyline points="0,0  14,15 0,29" stroke="#ffffff" stroke-width="2" stroke-linejoin="round" fill="none" />
+          </svg>
         </div>
       </div>
     </section>
@@ -495,30 +548,60 @@
           <div class="footer__right footer__column">
             <div class="footer__right-socials">
               <a class="footer__right-link" href="#">
-              <svg class="footer__right-social">
-                <use xlink:href="img/icons/sprite.svg#vk"></use>
-              </svg>
-            </a>
-            <a class="footer__right-link" href="#">
-              <svg class="footer__right-social">
-                <use xlink:href="img/icons/sprite.svg#fb"></use>
-              </svg>
-            </a>
-            <a class="footer__right-link" href="#">
-              <svg class="footer__right-social">
-                <use xlink:href="img/icons/sprite.svg#inst"></use>
-              </svg>
-            </a>
-            <a class="footer__right-link" href="#">
-              <svg class="footer__right-social">
-                <use xlink:href="img/icons/sprite.svg#twitter"></use>
-              </svg>
-            </a>
+                <svg class="footer__right-social">
+                  <use xlink:href="img/icons/sprite.svg#vk"></use>
+                </svg>
+              </a>
+              <a class="footer__right-link" href="#">
+                <svg class="footer__right-social">
+                  <use xlink:href="img/icons/sprite.svg#fb"></use>
+                </svg>
+              </a>
+              <a class="footer__right-link" href="#">
+                <svg class="footer__right-social">
+                  <use xlink:href="img/icons/sprite.svg#inst"></use>
+                </svg>
+              </a>
+              <a class="footer__right-link" href="#">
+                <svg class="footer__right-social">
+                  <use xlink:href="img/icons/sprite.svg#twitter"></use>
+                </svg>
+              </a>
             </div>
           </div>
         </div>
       </footer>
     </section>
+    <div class="fullscreen-menu">
+      <section class="fullscreen-menu__wrapper">
+        <div class="section__wrapper">
+          <a href="#" class="hamburger-menu__close" tabindex="0"></a>
+          <div class="header__logo-wrapper">
+            <img class="header__logo" src="img/icons/logo.svg" alt="Mr. Burger">
+          </div>
+          <ul class="fullscreen-menu__list">
+            <li class="fullscreen-menu__item">
+              <a href="#" class="fullscreen-menu__link">Почему мы</a>
+            </li>
+            <li class="fullscreen-menu__item">
+              <a href="#" class="fullscreen-menu__link">Меню</a>
+            </li>
+            <li class="fullscreen-menu__item">
+              <a href="#" class="fullscreen-menu__link">Советы</a>
+            </li>
+            <li class="fullscreen-menu__item">
+              <a href="#" class="fullscreen-menu__link">Кто мы</a>
+            </li>
+            <li class="fullscreen-menu__item">
+              <a href="#" class="fullscreen-menu__link">Свяжитесь с нами</a>
+            </li>
+            <li class="fullscreen-menu__item">
+              <a href="#" class="fullscreen-menu__link">Контакты</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
   </main>
   <ul class="section-switch">
     <li class="section-switch__item section-switch__item--active"></li>
@@ -530,6 +613,7 @@
     <li class="section-switch__item"></li>
     <li class="section-switch__item"></li>
   </ul>
+<script src="js/script.js"></script>
 </body>
 
 </html>
