@@ -60,3 +60,32 @@
 		color: $color;
 	}
 }
+
+@mixin close($top, $right, $height, $width) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  display: none;
+  width: $height;
+  height: $height;
+
+  &::before, &::after {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: $height;
+    width: $width;
+    border-radius: 3px;
+    background-color: #c1c2c2;
+    transform: translate(-50%);
+    transform-origin: center;
+    content: '';
+  }
+
+  &::before {
+      transform: rotate(45deg);
+  }
+  &::after {
+    transform: rotate(-45deg);
+  }
+}

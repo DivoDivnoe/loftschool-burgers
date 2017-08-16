@@ -8,6 +8,10 @@
   <title>Title</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -42,7 +46,7 @@
               </ul>
             </nav>
             <a class="main-nav__btn" href="#">Заказать</a>
-            <div class="main-nav__hamburger">
+            <div class="main-nav__hamburger" tabindex="0">
               <span class="main-nav__hamburger-line"></span>
               <span class="main-nav__hamburger-line"></span>
               <span class="main-nav__hamburger-line"></span>
@@ -568,6 +572,36 @@
         </div>
       </footer>
     </section>
+    <div class="fullscreen-menu">
+      <section class="fullscreen-menu__wrapper">
+        <div class="section__wrapper">
+          <a href="#" class="hamburger-menu__close" tabindex="0"></a>
+          <div class="header__logo-wrapper">
+            <img class="header__logo" src="img/icons/logo.svg" alt="Mr. Burger">
+          </div>
+          <ul class="fullscreen-menu__list">
+            <li class="fullscreen-menu__item">
+              <a href="#" class="fullscreen-menu__link">Почему мы</a>
+            </li>
+            <li class="fullscreen-menu__item">
+              <a href="#" class="fullscreen-menu__link">Меню</a>
+            </li>
+            <li class="fullscreen-menu__item">
+              <a href="#" class="fullscreen-menu__link">Советы</a>
+            </li>
+            <li class="fullscreen-menu__item">
+              <a href="#" class="fullscreen-menu__link">Кто мы</a>
+            </li>
+            <li class="fullscreen-menu__item">
+              <a href="#" class="fullscreen-menu__link">Свяжитесь с нами</a>
+            </li>
+            <li class="fullscreen-menu__item">
+              <a href="#" class="fullscreen-menu__link">Контакты</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
   </main>
   <ul class="section-switch">
     <li class="section-switch__item section-switch__item--active"></li>
@@ -579,6 +613,7 @@
     <li class="section-switch__item"></li>
     <li class="section-switch__item"></li>
   </ul>
+<script src="js/script.js"></script>
 </body>
 
 </html>
