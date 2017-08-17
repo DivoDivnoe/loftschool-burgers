@@ -5,24 +5,11 @@ $(() => {
   const fullScreenMenu = $('.fullscreen-menu');
   const closer = fullScreenMenu.find('.hamburger-menu__close');
 
-  const showMenuHandler = () => {
-    fullScreenMenu.show();
-  }
-  const closeMenuHandler = () => {
-    fullScreenMenu.hide();
-  }
-
-  hamburger.on('click', showMenuHandler);
-  hamburger.on('keydown', (evt) => {
-    if (evt.keyCode === 13) {
-      showMenuHandler();
-    }
+  hamburger.on('click', () => {
+    fullScreenMenu.fadeIn(300);
+  });
+  closer.on('click', () => {
+    fullScreenMenu.fadeOut(300);
   });
 
-  closer.on('click', closeMenuHandler);
-  closer.on('keydown', (evt) => {
-    if (evt.keyCode === 13) {
-      closeMenuHandler();
-    }
-  });
 })
