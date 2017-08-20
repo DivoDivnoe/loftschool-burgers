@@ -413,6 +413,7 @@ ul {
   position: absolute;
   top: 30px;
   right: 19px;
+  display: block;
   width: 23px;
   height: 23px;
   cursor: default; }
@@ -842,6 +843,10 @@ ul {
       bottom: initial;
       right: 0; } }
 
+@media screen and (min-width: 769px) {
+  .slider__structure-wrapper:hover .structure__table {
+    top: 0; } }
+
 .slider__structure {
   display: -webkit-box;
   display: -webkit-flex;
@@ -859,8 +864,6 @@ ul {
   height: 5.625rem;
   border-radius: 0.3125rem;
   background-color: #f08c33; }
-  .slider__structure:hover .structure__table {
-    top: 0; }
 
 .structure__content {
   display: -webkit-box;
@@ -909,6 +912,8 @@ ul {
   -o-transition: top 0.2s ease-in;
   transition: top 0.2s ease-in;
   z-index: 100; }
+  .structure__table--active {
+    top: 0; }
   @media screen and (max-width: 768px) {
     .structure__table {
       left: 5.625rem;
@@ -925,17 +930,18 @@ ul {
 @media screen and (max-width: 768px) {
   .structure__close {
     position: absolute;
-    top: 20px;
-    right: 30px;
-    width: 2px;
-    height: 2px;
+    top: 12px;
+    right: 12px;
+    display: block;
+    width: 20px;
+    height: 20px;
     cursor: default; }
     .structure__close::before, .structure__close::after {
       position: absolute;
       top: 0;
       left: 50%;
-      height: 2px;
-      width: 20px;
+      height: 20px;
+      width: 2px;
       border-radius: 3px;
       background-color: #c1c2c2;
       -webkit-transform: translate(-50%);
@@ -963,6 +969,9 @@ ul {
   @media screen and (max-width: 768px) {
     .structure__list {
       max-width: 230px; } }
+  @media screen and (max-width: 480px) {
+    .structure__list {
+      max-width: 200px; } }
 
 .structure__item {
   display: -webkit-box;
@@ -1426,6 +1435,7 @@ ul {
   position: absolute;
   top: -99999px;
   right: 26px;
+  display: block;
   width: 20px;
   height: 20px;
   cursor: default; }
