@@ -18,16 +18,33 @@
   bottom: 0;
   right: 0;
   display: flex;
+  justify-content: flex-end;
+
+  @include tablets{
+    left: 0;
+  }
 }
 
 .menu-acco__item {
   display: flex;
   color: $white;
   cursor: pointer;
+  transition: width 1s ease;
 
   &--active {
     .menu-acco__title {
       color: $yellow;
+    }
+
+    .menu-acco__close {
+      @include phones {
+        top: 26px;
+      }
+    }
+
+    @include tablets {
+      flex: 1;
+      position: relative;
     }
 
     @include phones {
@@ -41,10 +58,14 @@
 
     .menu-acco__content {
       width: rem(540px);
-      overflow: auto;
-      background: rgba($grey, 0.93);
+      background: rgba($grey, 0.9);
+
       @include tablets {
-        flex: 1;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 80px;
         width: auto;
       }
     }
@@ -56,18 +77,23 @@
   height: 100%;
   line-height: 1.71;
   overflow: hidden;
+  transition: all 0.3s ease;
 
   p {
     margin: 0;
     padding: rem(60px) rem(35px);
+
+    @include small-phones {
+      margin-top: 10px;
+    }
   }
 }
 
 .menu-acco__close {
-  @include close(26px, 26px, 20px, 3px);
+  @include close(-99999px, 26px, 20px, 3px);
   
   @include phones {
-    display: block;
+    //display: block;
   }
 }
 
@@ -75,7 +101,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: rem(80px);
+  width: rem($accoTabWidth);
 }
 
 .menu-acco__heading--meat {

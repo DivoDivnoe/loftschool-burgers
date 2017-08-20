@@ -10,7 +10,9 @@
 }
 
 .header__logo {
+  position: relative;
   max-width: 100%;
+  z-index: 500;
 }
 
 .header__btns {

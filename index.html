@@ -8,10 +8,7 @@
   <title>Title</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
-  <script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -51,6 +48,33 @@
               <span class="main-nav__hamburger-line"></span>
               <span class="main-nav__hamburger-line"></span>
             </div>
+          </div>
+          <div class="fullscreen-menu">
+            <section class="fullscreen-menu__wrapper">
+              <div class="section__wrapper">
+                <a href="#" class="hamburger-menu__close"></a>
+                <ul class="fullscreen-menu__list">
+                  <li class="fullscreen-menu__item">
+                    <a href="#" class="fullscreen-menu__link">Почему мы</a>
+                  </li>
+                  <li class="fullscreen-menu__item">
+                    <a href="#" class="fullscreen-menu__link">Меню</a>
+                  </li>
+                  <li class="fullscreen-menu__item">
+                    <a href="#" class="fullscreen-menu__link">Советы</a>
+                  </li>
+                  <li class="fullscreen-menu__item">
+                    <a href="#" class="fullscreen-menu__link">Кто мы</a>
+                  </li>
+                  <li class="fullscreen-menu__item">
+                    <a href="#" class="fullscreen-menu__link">Свяжитесь с нами</a>
+                  </li>
+                  <li class="fullscreen-menu__item">
+                    <a href="#" class="fullscreen-menu__link">Контакты</a>
+                  </li>
+                </ul>
+              </div>
+            </section>
           </div>
         </header>
         <div class="banner-item">
@@ -142,23 +166,75 @@
       <div class="section__wrapper slider__wrapper">
         <div class="slider__content">
           <div class="slider__column slider__column--left">
-            <div class="slider__structure">
-              <div class="slider__structure-content">
-                <svg class="slider__structure-icon">
-                  <use xlink:href="img/icons/sprite.svg#burger"></use>
+            <div class="slider__icons">
+              <div class="slider__structure structure">
+                <div class="structure__content">
+                  <svg class="structure__icon">
+                    <use xlink:href="img/icons/sprite.svg#burger"></use>
+                  </svg>
+                  Состав
+                </div>
+                <div class="structure__table">
+                  <a href="#" class="structure__close"></a>
+                  <ul class="structure__list">
+                    <li class="structure__item structure__item-icon--beef">
+                      <svg class="structure__item-icon">
+                        <use xlink:href="img/icons/sprite.svg#beef"></use>
+                      </svg>
+                      <b>Говядина</b>
+                      <span>300 г</span>
+                    </li>
+                    <li class="structure__item">
+                      <svg class="structure__item-icon structure__item-icon--buns">
+                        <use xlink:href="img/icons/sprite.svg#buns"></use>
+                      </svg>
+                      <b>Булочки</b>
+                      <span>100 г</span>
+                    </li>
+                    <li class="structure__item">
+                      <svg class="structure__item-icon structure__item-icon--salad">
+                        <use xlink:href="img/icons/sprite.svg#salad"></use>
+                      </svg>
+                      <b>Зелень</b>
+                      <span>70 г</span>
+                    </li>
+                    <li class="structure__item">
+                      <svg class="structure__item-icon structure__item-icon--sauce">
+                        <use xlink:href="img/icons/sprite.svg#sauce"></use>
+                      </svg>
+                      <b>Соус</b>
+                      <span>150 г</span>
+                    </li>
+                    <li class="structure__item">
+                      <svg class="structure__item-icon structure__item-icon--cucumber">
+                        <use xlink:href="img/icons/sprite.svg#cucumber"></use>
+                      </svg>
+                      <b>Овощи</b>
+                      <span>200 г</span>
+                    </li>
+                    <li class="structure__item">
+                      <svg class="structure__item-icon structure__item-icon--cheese">
+                        <use xlink:href="img/icons/sprite.svg#cheese"></use>
+                      </svg>
+                      <b>Сыр</b>
+                      <span>80 г</span>
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+              <div class="slider__kalories">
+                <svg class="slider__kalories-icon">
+                  <use xlink:href="img/icons/sprite.svg#kkal"></use>
                 </svg>
-                Состав
+                <span class="slider__kalories-number">1200</span> ккал
               </div>
             </div>
+
             <div class="slider__image">
               <img class="slider__pic" src="img/content/burger-slider.png" alt="hit" class="slider__pic">
             </div>
-            <div class="slider__kalories">
-              <svg class="slider__kalories-icon">
-                <use xlink:href="img/icons/sprite.svg#kkal"></use>
-              </svg>
-              <span class="slider__kalories-number">1200</span> ккал
-            </div>
+
           </div>
           <div class="slider__column slider__column--right">
             <div class="slider__title">
@@ -293,7 +369,7 @@
         Меню
       </div>
       <div class="menu-acco">
-        <div class="menu-acco__item menu-acco__item--active">
+        <div class="menu-acco__item">
           <div class="menu-acco__heading menu-acco__heading--meat">
             <div class="menu-acco__title">
               Для мясоедов
@@ -572,36 +648,6 @@
         </div>
       </footer>
     </section>
-    <div class="fullscreen-menu">
-      <section class="fullscreen-menu__wrapper">
-        <div class="section__wrapper">
-          <a href="#" class="hamburger-menu__close"></a>
-          <div class="header__logo-wrapper">
-            <img class="header__logo" src="img/icons/logo.svg" alt="Mr. Burger">
-          </div>
-          <ul class="fullscreen-menu__list">
-            <li class="fullscreen-menu__item">
-              <a href="#" class="fullscreen-menu__link">Почему мы</a>
-            </li>
-            <li class="fullscreen-menu__item">
-              <a href="#" class="fullscreen-menu__link">Меню</a>
-            </li>
-            <li class="fullscreen-menu__item">
-              <a href="#" class="fullscreen-menu__link">Советы</a>
-            </li>
-            <li class="fullscreen-menu__item">
-              <a href="#" class="fullscreen-menu__link">Кто мы</a>
-            </li>
-            <li class="fullscreen-menu__item">
-              <a href="#" class="fullscreen-menu__link">Свяжитесь с нами</a>
-            </li>
-            <li class="fullscreen-menu__item">
-              <a href="#" class="fullscreen-menu__link">Контакты</a>
-            </li>
-          </ul>
-        </div>
-      </section>
-    </div>
   </main>
   <ul class="section-switch">
     <li class="section-switch__item section-switch__item--active"></li>
@@ -613,7 +659,7 @@
     <li class="section-switch__item"></li>
     <li class="section-switch__item"></li>
   </ul>
-<script src="js/script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

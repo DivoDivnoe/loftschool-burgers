@@ -1,15 +1,17 @@
 $(() => {
-  const ENTER_KEY_CODE = 13;
-  
   const hamburger = $('.main-nav__hamburger');
   const fullScreenMenu = $('.fullscreen-menu');
-  const closer = fullScreenMenu.find('.hamburger-menu__close');
+  const fullScreenMenuCloser = fullScreenMenu.find('.hamburger-menu__close');
+
+  /*const structure = $('.slider__structure');
+  const structureTable = structure.find('.structure__table');
+  const structureTableCloser = structureTable.find('.structure__close');*/
 
   hamburger.on('click', () => {
     fullScreenMenu.fadeIn(300);
   });
-  closer.on('click', () => {
+  fullScreenMenuCloser.on('click', (evt) => {
+    evt.preventDefault();
     fullScreenMenu.fadeOut(300);
   });
-
 })
