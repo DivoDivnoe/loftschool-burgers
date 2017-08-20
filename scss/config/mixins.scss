@@ -65,9 +65,9 @@
   position: absolute;
   top: $top;
   right: $right;
-  display: none;
   width: $height;
   height: $height;
+  cursor: default;
 
   &::before, &::after {
     position: absolute;
