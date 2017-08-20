@@ -76,6 +76,16 @@ $kaloriesIconWidth: 60px;
   }
 }
 
+.slider__structure-wrapper {
+  @include desktops {
+    &:hover {
+      .structure__table {
+        top: 0;
+      }
+    }
+  }
+}
+
 .slider__structure {
   display: flex;
   justify-content: center;
@@ -84,12 +94,6 @@ $kaloriesIconWidth: 60px;
   height: rem($structureIconWidth);
   border-radius: rem(5px);
   background-color: #f08c33;
-
-  &:hover {
-    .structure__table {
-      top: 0;
-    }
-  }
 }
 
 .structure__content {
@@ -121,6 +125,10 @@ $kaloriesIconWidth: 60px;
   transition: top 0.2s ease-in;
   z-index: 100;
 
+  &--active {
+    top: 0;
+  }
+
   @include tablets {
     left: rem($structureIconWidth);
     right: rem($kaloriesIconWidth);
@@ -136,7 +144,7 @@ $kaloriesIconWidth: 60px;
 
 .structure__close {
   @include tablets {
-    @include close(20px, 30px, 2px, 20px);
+    @include close(12px, 12px, 20px, 2px);
 
     &::before, &::after {
       background-color: $red;
@@ -152,6 +160,10 @@ $kaloriesIconWidth: 60px;
 
   @include tablets {
     max-width: 230px;
+  }
+
+  @include phones {
+    max-width: 200px;
   }
 }
 
