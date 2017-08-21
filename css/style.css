@@ -472,7 +472,7 @@ ul {
   justify-content: center;
   margin: 0;
   padding: 0;
-  height: 83%;
+  height: 90%;
   list-style: none; }
 
 .fullscreen-menu__item {
@@ -722,6 +722,7 @@ ul {
     margin: 0; }
 
 .slider {
+  width: 100%;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(24%, #f9b43b), color-stop(48%, #eb8c38), color-stop(74%, #f9b43b));
   background-image: -webkit-linear-gradient(top, #f9b43b 24%, #eb8c38 48%, #f9b43b 74%);
   background-image: -o-linear-gradient(top, #f9b43b 24%, #eb8c38 48%, #f9b43b 74%);
@@ -740,16 +741,40 @@ ul {
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  width: 100%; }
 
 .slider__content {
+  position: relative;
+  width: 100%;
+  overflow: hidden; }
+
+.slider__list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 300%;
+  -webkit-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  -webkit-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  transform: translateX(0%); }
+
+.slider__item {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding-bottom: 80px; }
   @media screen and (max-width: 768px) {
-    .slider__content {
+    .slider__item {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -webkit-flex-direction: column;
@@ -918,7 +943,7 @@ ul {
     .structure__table {
       left: 5.625rem;
       right: 3.75rem;
-      min-width: 17.5rem;
+      min-width: 16.25rem;
       width: auto;
       -webkit-transform: none;
       -ms-transform: none;
@@ -1130,30 +1155,14 @@ ul {
     background-color: #c1401e; }
 
 .slider__arrow {
-  position: absolute;
-  top: 50%;
   width: 14px;
   height: 29px;
+  margin-left: 20px;
+  margin-right: 20px;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   cursor: pointer; }
-  .slider__arrow--left {
-    left: -3%; }
-    @media screen and (max-width: 768px) {
-      .slider__arrow--left {
-        left: 3%; } }
-    @media screen and (max-width: 480px) {
-      .slider__arrow--left {
-        left: 0; } }
-  .slider__arrow--right {
-    right: -3%; }
-    @media screen and (max-width: 768px) {
-      .slider__arrow--right {
-        right: 3%; } }
-    @media screen and (max-width: 480px) {
-      .slider__arrow--right {
-        right: 0; } }
 
 .team {
   position: relative;
