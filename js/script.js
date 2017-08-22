@@ -51,15 +51,64 @@ $(() => {
       index === 0 ? index = count - 1 : index--;
     }
 
-    sliderItemActive.classList.remove('slider__item--active');
-    sliderItems[index].classList.add('slider__item--active');
     slider.style.transform = 'translateX(' + -width * index + '%)';
+    slider.addEventListener('transitionend', (evt) => {
+      if (evt.propertyName !== 'transform') {
+        return;
+      }
+      sliderItemActive.classList.remove('slider__item--active');
+      sliderItems[index].classList.add('slider__item--active');
+    });
   }
 
-  arrows.on('click', slideEventHandler);
-  arrows.on('keydown', (evt) => {
-    if (evt.keyCode === ENTER_KEY_CODE) {
-      slideEventHandler(evt);
+  arrows.on({
+    click: slideEventHandler,
+    keydown: (evt) => {
+      if (evt.keyCode === ENTER_KEY_CODE) {
+        slideEventHandler(evt);
+      }
+    }
+  });
+});
+
+//one page scroll
+$(() => {
+  const wrapper = document.querySelector('.wrapper');
+  const content = wrapper.querySelector('.maincontent');
+  const sections = content.querySelectorAll('.section');
+  const count = sections.length;
+  let inScroll = false;
+
+  wrapper.addEventListener('wheel', (evt) => {
+    const activeSection = Array.from(sections).find((item) => item.classList.contains('section--active'));
+    let index = Array.from(sections).indexOf(activeSection);
+    let next;
+    const deltaY = evt.deltaY;
+    const direction = evt.deltaY > 0 ? 'down' : 'up';
+
+    if (!inScroll) {
+      inScroll = true;
+
+      setTimeout(function() {
+        inScroll = false;
+        console.log(inScroll);
+      }, 1300);
+
+      if (direction === 'down') {
+        next = activeSection.nextElementSibling;
+      } else {
+        next = activeSection.previousElementSibling;
+      }
+
+      if (!next) {
+        return;
+      }
+      index = Array.from(sections).indexOf(next);
+
+      activeSection.classList.remove('section--active');
+      next.classList.add('section--active');
+
+      content.style.transform = 'translateY(' + -100 * index + '%)';
     }
   });
 });
