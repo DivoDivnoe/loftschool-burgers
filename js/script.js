@@ -77,6 +77,9 @@ $(() => {
   const content = wrapper.querySelector('.maincontent');
   const sections = content.querySelectorAll('.section');
   const count = sections.length;
+  const links = content.querySelectorAll('.main-nav__link');
+  const switcher = document.querySelector('.section-switch');
+  const switches = switcher.querySelectorAll('.section-switch__item');
   let inScroll = false;
 
   wrapper.addEventListener('wheel', (evt) => {
@@ -103,6 +106,7 @@ $(() => {
       if (!next) {
         return;
       }
+
       index = Array.from(sections).indexOf(next);
 
       activeSection.classList.remove('section--active');
@@ -110,5 +114,53 @@ $(() => {
 
       content.style.transform = 'translateY(' + -100 * index + '%)';
     }
+  });
+
+  links.forEach((link) => {
+    link.addEventListener('click', (evt) => {
+      evt.preventDefault();
+
+      const activeSection = Array.from(sections).find((item) => item.classList.contains('section--active'));
+
+      if (!inScroll) {
+        inScroll = true;
+
+        setTimeout(function() {
+          inScroll = false;
+          console.log(inScroll);
+        }, 1300);
+
+        index = evt.target.dataset.section;
+
+        activeSection.classList.remove('section--active');
+        sections[index].classList.add('section--active');
+
+        content.style.transform = 'translateY(' + -100 * index + '%)';
+      }
+    });
+  });
+
+  switches.forEach((item) => {
+    item.addEventListener('click', (evt) => {
+      const target = evt.target;
+      const activeSection = Array.from(sections).find((item) => item.classList.contains('section--active'));
+
+      if (!inScroll) {
+        inScroll = true;
+
+        setTimeout(function() {
+          inScroll = false;
+          console.log(inScroll);
+        }, 1300);
+
+        $(target).siblings().removeClass('section-switch__item--active');
+        target.classList.add('section-switch__item--active');
+        index = target.dataset.section;
+        activeSection.classList.remove('section--active');
+        sections[index].classList.add('section--active');
+
+        content.style.transform = 'translateY(' + -100 * index + '%)';
+      }
+    });
   });
 });
