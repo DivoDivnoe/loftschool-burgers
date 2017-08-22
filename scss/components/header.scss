@@ -65,6 +65,9 @@
 
 .main-nav__btn {
   @include btn;
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 .main-nav__hamburger {
