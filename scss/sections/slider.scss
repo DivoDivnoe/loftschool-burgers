@@ -23,8 +23,7 @@ $kaloriesIconWidth: 60px;
 .slider__list {
   display: flex;
   width: 300%;
-  transition: all 0.7s ease;
-  transform: translateX(0%);
+  transition: transform 0.7s ease;
 }
 
 .slider__item {
