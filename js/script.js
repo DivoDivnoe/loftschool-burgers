@@ -37,27 +37,28 @@ $(() => {
   const arrows = $('.slider__arrow');
 
   const slideEventHandler = (evt) => {
-    const target = evt.target;
-    const slider = target.parentElement.querySelector('.slider__list');
-    const sliderItems = slider.querySelectorAll('.slider__item');
-    const sliderItemActive = Array.from(sliderItems).find((item) => item.classList.contains('slider__item--active'));
-    let index = Array.from(sliderItems).indexOf(sliderItemActive);
+    const target = $(evt.target);
+    const slider = target.siblings().find('.slider__list');
+    const sliderItems = slider.find('.slider__item');
+    const sliderItemActive = sliderItems.filter('.slider__item--active');
+    let index = sliderItemActive.index();
     const count = sliderItems.length;
     const width = 100 / count;
 
-    if (target.classList.contains('slider__arrow-right')) {
+    if (target.hasClass('slider__arrow-right')) {
       index === count - 1 ? index = 0 : index++;
     } else {
       index === 0 ? index = count - 1 : index--;
     }
 
-    slider.style.transform = 'translateX(' + -width * index + '%)';
-    slider.addEventListener('transitionend', (evt) => {
-      if (evt.propertyName !== 'transform') {
+    slider.css('transform', 'translateX(' + -width * index + '%)');
+    slider.on('transitionend', (evt) => {
+      if (evt.originalEvent.propertyName !== 'transform') {
         return;
       }
-      sliderItemActive.classList.remove('slider__item--active');
-      sliderItems[index].classList.add('slider__item--active');
+
+      sliderItemActive.removeClass('slider__item--active');
+      sliderItems.eq(index).addClass('slider__item--active');
     });
   }
 
@@ -73,94 +74,85 @@ $(() => {
 
 //one page scroll
 $(() => {
-  const wrapper = document.querySelector('.wrapper');
-  const content = wrapper.querySelector('.maincontent');
-  const sections = content.querySelectorAll('.section');
+  const UP_KEY_CODE = 38;
+  const DOWN_KEY_CODE = 40;
+
+  const wrapper = $('.wrapper');
+  const content = wrapper.find('.maincontent');
+  const sections = content.find('.section');
   const count = sections.length;
-  const links = content.querySelectorAll('.main-nav__link');
-  const switcher = document.querySelector('.section-switch');
-  const switches = switcher.querySelectorAll('.section-switch__item');
+  const links = content.find('.main-nav__link');
+  const switcher = $('.section-switch');
+  const switches = switcher.find('.section-switch__item');
+  const duration = +content.css('transition-duration').slice(0, -1) * 1000;
   let inScroll = false;
 
-  wrapper.addEventListener('wheel', (evt) => {
-    const activeSection = Array.from(sections).find((item) => item.classList.contains('section--active'));
-    let index = Array.from(sections).indexOf(activeSection);
-    let next;
-    const deltaY = evt.deltaY;
-    const direction = evt.deltaY > 0 ? 'down' : 'up';
+  const defineSections = () => {
+    const activeSection = sections.filter('.section--active');
 
-    if (!inScroll) {
-      inScroll = true;
+    return {
+      activeSection: activeSection,
+      nextSection: activeSection.next(),
+      prevSection: activeSection.prev()
+    }
+  };
 
-      setTimeout(function() {
-        inScroll = false;
-        console.log(inScroll);
-      }, 1300);
+  const performTransition = (index) => {
+    if (inScroll) {
+      return;
+    }
+    inScroll = true;
 
-      if (direction === 'down') {
-        next = activeSection.nextElementSibling;
-      } else {
-        next = activeSection.previousElementSibling;
-      }
+    setTimeout(function() {
+      inScroll = false;
+    }, duration + 300);
 
-      if (!next) {
-        return;
-      }
+    sections.eq(index).addClass('section--active').siblings().removeClass('section--active');
+    switches.eq(index).addClass('section-switch__item--active').siblings().removeClass('section-switch__item--active');
 
-      index = Array.from(sections).indexOf(next);
+    content.css('transform', 'translateY(' + -100 * index + '%)');
+  };
 
-      activeSection.classList.remove('section--active');
-      next.classList.add('section--active');
+  const scrollToSection = (dir) => {
+    const section = defineSections();
 
-      content.style.transform = 'translateY(' + -100 * index + '%)';
+    if (dir === 'down' && section.nextSection.length) {
+      performTransition(section.nextSection.index());
+    }
+
+    if (dir === 'up' && section.prevSection.length) {
+      performTransition(section.prevSection.index());
+    }
+  };
+
+  wrapper.on('wheel', (evt) => {
+    const deltaY = evt.originalEvent.deltaY;
+    const direction = deltaY > 0 ? 'down' : 'up';
+
+    scrollToSection(direction);
+  });
+
+  $(document).on('keydown', (evt) => {
+    const section = defineSections();
+
+    switch (evt.keyCode) {
+      case DOWN_KEY_CODE:
+        if (section.nextSection.length) {
+          performTransition(section.nextSection.index());
+        }
+      case UP_KEY_CODE:
+        if (section.prevSection.length) {
+          performTransition(section.prevSection.index());
+        }
     }
   });
 
-  links.forEach((link) => {
-    link.addEventListener('click', (evt) => {
-      evt.preventDefault();
-
-      const activeSection = Array.from(sections).find((item) => item.classList.contains('section--active'));
-
-      if (!inScroll) {
-        inScroll = true;
-
-        setTimeout(function() {
-          inScroll = false;
-          console.log(inScroll);
-        }, 1300);
-
-        index = evt.target.dataset.section;
-
-        activeSection.classList.remove('section--active');
-        sections[index].classList.add('section--active');
-
-        content.style.transform = 'translateY(' + -100 * index + '%)';
-      }
-    });
+  links.on('click', (evt) => {
+    evt.preventDefault();
+    performTransition($(evt.target).attr('data-section'));
   });
 
-  switches.forEach((item) => {
-    item.addEventListener('click', (evt) => {
-      const target = evt.target;
-      const activeSection = Array.from(sections).find((item) => item.classList.contains('section--active'));
-
-      if (!inScroll) {
-        inScroll = true;
-
-        setTimeout(function() {
-          inScroll = false;
-          console.log(inScroll);
-        }, 1300);
-
-        $(target).siblings().removeClass('section-switch__item--active');
-        target.classList.add('section-switch__item--active');
-        index = target.dataset.section;
-        activeSection.classList.remove('section--active');
-        sections[index].classList.add('section--active');
-
-        content.style.transform = 'translateY(' + -100 * index + '%)';
-      }
-    });
+  switches.on('click', (evt) => {
+    performTransition($(evt.target).index());
   });
 });
