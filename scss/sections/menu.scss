@@ -18,16 +18,32 @@
   bottom: 0;
   right: 0;
   display: flex;
+  justify-content: flex-end;
+
+  @include tablets{
+    left: 0;
+  }
 }
 
 .menu-acco__item {
   display: flex;
   color: $white;
   cursor: pointer;
+  transition: width 1s ease;
 
   &--active {
     .menu-acco__title {
       color: $yellow;
+    }
+
+    .menu-acco__close {
+      @include phones {
+        top: 26px;
+      }
+    }
+
+    @include tablets {
+      position: relative;
     }
 
     @include phones {
@@ -36,17 +52,11 @@
       right: 0;
       width: 100vw;
       height: 100vh;
-      z-index: 100;
+      z-index: 1000;
     }
 
     .menu-acco__content {
-      width: rem(540px);
-      overflow: auto;
-      background: rgba($grey, 0.93);
-      @include tablets {
-        flex: 1;
-        width: auto;
-      }
+      background: rgba($grey, 0.9);
     }
   }
 }
@@ -56,51 +66,33 @@
   height: 100%;
   line-height: 1.71;
   overflow: hidden;
+  transition: all 0.3s ease;
 
   p {
     margin: 0;
     padding: rem(60px) rem(35px);
+
+    @include small-phones {
+      margin-top: 10px;
+    }
   }
 }
 
 .menu-acco__close {
-  position: absolute;
-  top: 26px;
-  right: 26px;
-  display: none;
-  width: 20px;
-  height: 20px;
-
-  &::before, &::after {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    height: 20px;
-    width: 3px;
-    border-radius: 3px;
-    background-color: #c1c2c2;
-    transform: translate(-50%);
-    transform-origin: center;
-    content: '';
-  }
+  @include close(-99999px, 26px, 20px, 3px);
   
   @include phones {
-    display: block;
-    
-    &::before {
-      transform: rotate(45deg);
-    }
-    &::after {
-      transform: rotate(-45deg);
-    }
+    //display: block;
   }
 }
 
 .menu-acco__heading {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: rem(80px);
+  width: rem($accoTabWidth);
+  z-index: 100;
 }
 
 .menu-acco__heading--meat {
@@ -119,10 +111,12 @@
 }
 
 .menu-acco__title {
+  position: relative;
   font-size: rem(40px);
   line-height: 1.6;
   font-family: $gagalin;
   white-space: nowrap;
   text-transform: uppercase;
   transform: rotate(-90deg);
+  z-index: 0;
 }
