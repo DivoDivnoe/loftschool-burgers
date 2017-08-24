@@ -43,7 +43,6 @@
     }
 
     @include tablets {
-      flex: 1;
       position: relative;
     }
 
@@ -53,21 +52,11 @@
       right: 0;
       width: 100vw;
       height: 100vh;
-      z-index: 100;
+      z-index: 1000;
     }
 
     .menu-acco__content {
-      width: rem(540px);
       background: rgba($grey, 0.9);
-
-      @include tablets {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 80px;
-        width: auto;
-      }
     }
   }
 }
@@ -98,10 +87,12 @@
 }
 
 .menu-acco__heading {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   width: rem($accoTabWidth);
+  z-index: 100;
 }
 
 .menu-acco__heading--meat {
@@ -120,10 +111,12 @@
 }
 
 .menu-acco__title {
+  position: relative;
   font-size: rem(40px);
   line-height: 1.6;
   font-family: $gagalin;
   white-space: nowrap;
   text-transform: uppercase;
   transform: rotate(-90deg);
+  z-index: 0;
 }
