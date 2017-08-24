@@ -64,6 +64,10 @@ ul {
   transition: transform ease;
   transition-duration: 1s;
   will-change: transform;
+
+  @include tablets {
+    min-height: auto;
+  }
 }
 
 .section {
@@ -72,6 +76,10 @@ ul {
   background-color: rgba(0, 0, 0, 0.31);
   min-height: rem(650px);
   overflow: hidden;
+
+  @include tablets {
+    min-height: auto;
+  }
 }
 
 .section__wrapper {

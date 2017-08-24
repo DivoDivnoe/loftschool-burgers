@@ -165,8 +165,8 @@
       </section>
       <section class="slider section">
         <div class="section__wrapper slider__wrapper">
-          <svg class="slider__arrow slider__arrow-left" tabindex="0">
-            <polyline points="14,0  0,15 14,29" stroke="#ffffff" stroke-width="2" stroke-linejoin="round" fill="none" />
+          <svg class="slider__arrow slider__arrow--left" tabindex="0">
+            <use xlink:href="img/icons/sprite.svg#arrow-scroll"></use>
           </svg>
           <div class="slider__content">
             <ul class="slider__list">
@@ -256,7 +256,7 @@
                     <div class="slider__price">
                       <span class="slider__price-number">500</span> рублей
                     </div>
-                    <a href="#" class="slider__btn">
+                    <a href="#" class="slider__btn" data-section="6">
                       Заказать
                     </a>
                   </div>
@@ -448,8 +448,8 @@
               </li>
             </ul>
           </div>
-          <svg class="slider__arrow slider__arrow-right" tabindex="0">
-            <polyline points="0,0  14,15 0,29" stroke="#ffffff" stroke-width="2" stroke-linejoin="round" fill="none" />
+          <svg class="slider__arrow slider__arrow--right" tabindex="0">
+            <use xlink:href="img/icons/sprite.svg#arrow-scroll"></use>
           </svg>
         </div>
       </section>
@@ -716,46 +716,46 @@
           <div class="order__title">
             Закажите доставку
           </div>
-          <div class="form">
-            <form action="#">
+          <div class="form-wrapper">
+            <form class="form" action="script.php" method="POST">
               <div class="form__columns">
                 <div class="form__column form__column--left">
                   <div class="form__row">
                     <div class="form__input-wrapper">
                       <label class="form__input-lable" for="name">Имя</label>
-                      <input class="form__input" type="text" id="name">
+                      <input class="form__input" type="text" id="name" name="name" required>
                     </div>
                     <div class="form__input-wrapper">
                       <label class="form__input-lable" for="phone">Телефон</label>
-                      <input class="form__input" type="text" id="phone">
+                      <input class="form__input" type="text" id="phone" name="phone" required>
                     </div>
                   </div>
                   <div class="form__row">
                     <div class="form__input-wrapper">
                       <label class="form__input-lable" for="street">Улица</label>
-                      <input class="form__input" type="text" id="street">
+                      <input class="form__input" type="text" id="street" name="street" required>
                     </div>
 
                   </div>
                   <div class="form__row">
                     <div class="form__input-wrapper">
                       <label class="form__input-lable" for="house">Дом</label>
-                      <input class="form__input" type="text" id="house">
+                      <input class="form__input" type="text" id="house" name="house" required>
                     </div>
 
                     <div class="form__input-wrapper">
                       <label class="form__input-lable" for="building">Корпус</label>
-                      <input class="form__input" type="text" id="building">
+                      <input class="form__input" type="text" id="building" name="building">
                     </div>
 
                     <div class="form__input-wrapper">
                       <label class="form__input-lable" for="flat">Квартира</label>
-                      <input class="form__input" type="text" id="flat">
+                      <input class="form__input" type="text" id="flat" name="flat" required>
                     </div>
 
                     <div class="form__input-wrapper">
                       <label class="form__input-lable" for="floor">Этаж</label>
-                      <input class="form__input" type="text" id="floor">
+                      <input class="form__input" type="text" id="floor" name="floor">
                     </div>
 
                   </div>
@@ -763,7 +763,7 @@
                 <div class="form__column form__column--right">
                   <div class="form__texarea-wrapper">
                     <label class="form__input-lable" for="comments">Комментарии</label>
-                    <textarea class="form__textarea" id="comments"></textarea>
+                    <textarea class="form__textarea" id="comments" name="comments"></textarea>
                   </div>
                   <div class="form__bottom">
                     <div class="form__radios">
@@ -790,6 +790,11 @@
                 </div>
               </div>
             </form>
+          </div>
+        </div>
+        <div class="order__modal-wrapper">
+          <div class="order__modal">
+            <a href="#" class="order__modal-btn">Закрыть</a>
           </div>
         </div>
       </section>
@@ -841,14 +846,14 @@
     </div>
   </main>
   <ul class="section-switch">
-    <li class="section-switch__item section-switch__item--active" data-section="0"></li>
-    <li class="section-switch__item" data-section="1"></li>
-    <li class="section-switch__item" data-section="2"></li>
-    <li class="section-switch__item" data-section="3"></li>
-    <li class="section-switch__item" data-section="4"></li>
-    <li class="section-switch__item" data-section="5"></li>
-    <li class="section-switch__item" data-section="6"></li>
-    <li class="section-switch__item" data-section="7"></li>
+    <li class="section-switch__item section-switch__item--active"></li>
+    <li class="section-switch__item"></li>
+    <li class="section-switch__item"></li>
+    <li class="section-switch__item"></li>
+    <li class="section-switch__item"></li>
+    <li class="section-switch__item"></li>
+    <li class="section-switch__item"></li>
+    <li class="section-switch__item"></li>
   </ul>
   <script src="js/script.js"></script>
 </body>
