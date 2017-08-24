@@ -113,7 +113,54 @@ $(() => {
 
 //team acco
 $(() => {
-  
+  $('.team-acco__title').on('click touchstart', (evt) => {
+    const target = $(evt.target);
+    const wrapper = target.next();
+    const reqHeight = wrapper.find('.team-acco__content').outerHeight();
+    const currentItem = target.parent();
+
+    wrapper.css('height', currentItem.hasClass('team-acco__item--active') ? 0 : reqHeight + 'px');
+
+    currentItem
+      .toggleClass('team-acco__item--active')
+      .siblings()
+      .removeClass('team-acco__item--active')
+      .find('.team-acco__content-wrapper')
+      .css('height', 0);
+  });
+});
+
+//menu acco
+$(() => {
+  $('.menu-acco__heading').on('click', (evt) => {
+    const target = $(evt.target);
+    const content = target.next();
+    const currentItem = target.parent();
+    const items = currentItem.parent().children();
+    let reqWidth = 540;
+
+    if (window.matchMedia('screen and (max-width: 768px)').matches) {
+      reqWidth = $('.menu').outerWidth() - items.length * target.outerWidth();
+    }
+
+    if (window.matchMedia('screen and (max-width: 480px)').matches) {
+      reqWidth = $('.menu').outerWidth() - target.outerWidth();
+      content.find('.menu-acco__close').on('click', () => {
+        content.css('width', 0);
+        currentItem.removeClass('menu-acco__item--active');
+      });
+
+    }
+
+    content.css('width', currentItem.hasClass('menu-acco__item--active') ? 0 : reqWidth + 'px');
+
+    currentItem
+      .toggleClass('menu-acco__item--active')
+      .siblings()
+      .removeClass('menu-acco__item--active')
+      .find('.menu-acco__content')
+      .css('width', 0);
+  });
 });
 
 //one page scroll
@@ -248,11 +295,11 @@ $(() => {
     });
 
     request.done((msg) => {
-      
+
       const wrapper = $('.order__modal-wrapper');
       const modal = wrapper.find('.order__modal');
       modal.find('.order__modal-message').remove();
-      
+
       if (msg.status === "OK") {
         modal.prepend('<span class="order__modal-message order__modal-message--sucсess">' + msg.message + '</span>');
       } else {
@@ -271,8 +318,31 @@ $(() => {
     });
 
     request.fail(function(jqXHR, textStatus) {
-        alert("Request failed: " + textStatus);
+      alert("Request failed: " + textStatus);
     });
 
+  });
+});
+
+//reviews
+$(() => {
+  const items = $('.reviews__item');
+  items.on('click touchstart', (evt) => {
+    const target = $(evt.target);
+    const name = target.closest('.reviews__item').find('.reviews__name');
+    const text = name.next();
+    const wrapper = $('.reviews__modal-wrapper');
+    const modal = wrapper.find('.reviews__modal');
+    const content = modal.find('.reviews__modal-content');
+
+    wrapper.addClass('reviews__modal-wrapper--active');
+    content.append(name.clone()).append(text.clone());
+
+    modal.find('.reviews-modal__close').on('click touchstart', (evt) => {
+      evt.preventDefault();
+
+      wrapper.removeClass('reviews__modal-wrapper--active');
+      content.empty();
+    });
   });
 });
