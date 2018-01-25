@@ -10,7 +10,9 @@
 }
 
 .header__logo {
+  position: relative;
   max-width: 100%;
+  z-index: 500;
 }
 
 .header__btns {
@@ -63,6 +65,9 @@
 
 .main-nav__btn {
   @include btn;
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 .main-nav__hamburger {
@@ -71,6 +76,7 @@
   justify-content: space-between;
   width: rem(24px);
   height: rem(24px);
+  cursor: pointer;
 
   @include tablets {
     display: flex;
