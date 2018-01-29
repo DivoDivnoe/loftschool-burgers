@@ -42,7 +42,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0;
+    visibility: hidden;
     color: #ffffff;
     background-color: rgba(20, 20, 20, 0.7);
     transition: opacity 0.3s ease;
@@ -61,11 +61,9 @@
   &:hover {
     filter: none;
 
-    .reviews__hover {
-      opacity: 1;
-
-      @include tablets {
-        opacity: 0;
+    @include desktops {
+      .reviews__hover {
+        visibility: visible;
       }
     }
   }
@@ -111,7 +109,8 @@
 .reviews-modal__close {
   @include close(20px, 20px, 15px, 3px);
 
-  &::before, &::after {
+  &::before,
+  &::after {
     background: $red;
   }
 }

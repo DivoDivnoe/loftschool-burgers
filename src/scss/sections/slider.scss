@@ -3,7 +3,12 @@ $kaloriesIconWidth: 60px;
 
 .slider {
   width: 100%;
-  background-image: linear-gradient(to bottom, #f9b43b 24%, #eb8c38 48%, #f9b43b 74%);
+  background-image: linear-gradient(
+    to bottom,
+    #f9b43b 24%,
+    #eb8c38 48%,
+    #f9b43b 74%
+  );
   color: $white;
 }
 
@@ -30,11 +35,12 @@ $kaloriesIconWidth: 60px;
   position: relative;
   display: flex;
   flex: 1;
-  padding-bottom: 80px;
+  padding-bottom: 90px;
 
   @include tablets {
     flex-direction: column;
     align-items: center;
+    padding-bottom: 40px;
   }
 }
 
@@ -53,11 +59,11 @@ $kaloriesIconWidth: 60px;
       margin-bottom: 45px;
     }
 
-     @include phones {
+    @include phones {
       align-items: center;
       width: 100%;
       margin-bottom: 5px;
-     }
+    }
   }
 
   &--right {
@@ -69,7 +75,7 @@ $kaloriesIconWidth: 60px;
       text-align: center;
     }
 
-     @include phones {
+    @include phones {
       align-items: center;
       width: 100%;
     }
@@ -162,7 +168,8 @@ $kaloriesIconWidth: 60px;
   @include tablets {
     @include close(12px, 12px, 20px, 2px);
 
-    &::before, &::after {
+    &::before,
+    &::after {
       background-color: $red;
     }
   }
@@ -204,15 +211,18 @@ $kaloriesIconWidth: 60px;
   height: 100%;
   margin-right: 25px;
 
-  &--beef, &--sauce {
+  &--beef,
+  &--sauce {
     fill: $red;
   }
 
-  &--buns, &--cheese {
+  &--buns,
+  &--cheese {
     fill: $yellow;
   }
 
-  &--salad, &--cucumber {
+  &--salad,
+  &--cucumber {
     fill: $green;
   }
 }
@@ -322,13 +332,27 @@ $kaloriesIconWidth: 60px;
 }
 
 .slider__arrow {
-  width: rem(29px);
-  height: rem(15px);
+  display: block;
+  width: rem(32px);
+  height: rem(18px);
   margin-left: rem(20px);
   margin-right: rem(20px);
-  fill: $white;
+  padding: 0;
+  border: none;
+  background-color: transparent;
   transform: translateY(-50%);
   cursor: pointer;
+
+  @include phones {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+}
+
+.slider__arrow-icon {
+  max-width: 100%;
+  max-height: 100%;
+  fill: $white;
 
   &--left {
     transform: rotate(90deg);
@@ -336,10 +360,5 @@ $kaloriesIconWidth: 60px;
 
   &--right {
     transform: rotate(-90deg);
-  }
-
-  @include phones {
-    margin-left: 8px;
-    margin-right: 8px;
   }
 }

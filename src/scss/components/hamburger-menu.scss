@@ -11,6 +11,11 @@
 
 .hamburger-menu__close {
   @include close(30px, 19px, 23px, 4px);
+  display: none;
+
+  @include tablets {
+    display: block;
+  }
 }
 
 .fullscreen-menu__wrapper {

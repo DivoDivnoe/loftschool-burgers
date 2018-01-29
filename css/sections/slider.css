@@ -1,5 +1,0 @@
-.slider {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(24%, #f9b43b), color-stop(48%, #eb8c38), color-stop(74%, #f9b43b));
-  background-image: -webkit-linear-gradient(#f9b43b 24%, #eb8c38 48%, #f9b43b 74%);
-  background-image: -o-linear-gradient(#f9b43b 24%, #eb8c38 48%, #f9b43b 74%);
-  background-image: linear-gradient(#f9b43b 24%, #eb8c38 48%, #f9b43b 74%); }
