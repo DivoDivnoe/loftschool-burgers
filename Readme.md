@@ -4,4 +4,4 @@
 
 **Курс**: Веб для начинающих *(07.2017)*
 
-**Демо**: https://divodivnoe.github.io/loftschool-burgers/
+**Демо**: https://divodivnoe.github.io/loftschool-burgers/build
