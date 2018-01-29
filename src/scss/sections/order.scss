@@ -8,7 +8,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 85%;
+  height: 95%;
 }
 
 .order__title {
@@ -97,7 +97,7 @@
 .form__bottom {
   display: flex;
   flex-direction: column;
-  
+
   @include phones {
     align-items: center;
   }
@@ -155,7 +155,8 @@
   display: none;
 
   &:checked + .form__checkbox-indicator {
-    &::before, &::after {
+    &::before,
+    &::after {
       opacity: 1;
     }
   }
@@ -169,7 +170,8 @@
   height: rem(15px);
   background-color: $white;
 
-  &::before, &::after {
+  &::before,
+  &::after {
     content: '';
     position: absolute;
     bottom: rem(2px);
@@ -182,7 +184,7 @@
   &::before {
     left: rem(5px);
     height: rem(7px);
-    transform: rotate(-30deg)
+    transform: rotate(-30deg);
   }
 
   &::after {
@@ -240,4 +242,3 @@
   border: none;
   cursor: pointer;
 }
-

@@ -92,10 +92,12 @@ gulp.task('scss', () => {
     )
     .pipe(
       stylelint({
-        reporters: [{
-          formatter: 'string',
-          console: true
-        }]
+        reporters: [
+          {
+            formatter: 'string',
+            console: true
+          }
+        ]
       })
     )
     .pipe(sourcemaps.init())
@@ -105,14 +107,20 @@ gulp.task('scss', () => {
       })
     )
     .pipe(sourcemaps.write())
-    .pipe(postcss([autoprefixer({
-      browsers: ['last 2 versions']
-    })]))
+    .pipe(
+      postcss([
+        autoprefixer({
+          browsers: ['last 2 versions']
+        })
+      ])
+    )
     .pipe(gulp.dest('build/css'))
     .pipe(csso())
-    .pipe(rename({
-      suffix: '.min'
-    }))
+    .pipe(
+      rename({
+        suffix: '.min'
+      })
+    )
     .pipe(gulp.dest(paths.scss.dest));
 });
 

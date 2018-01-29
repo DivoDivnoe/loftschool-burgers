@@ -52,6 +52,7 @@
   display: flex;
   flex-direction: column;
   flex: 1;
+  align-items: center;
 }
 
 .team-acco__item {
@@ -59,9 +60,6 @@
   flex-direction: column;
   margin-bottom: rem(6px);
 
-  @include tablets {
-    align-items: center;
-  }
   &--active {
     .team-acco__title {
       color: $yellow;
@@ -70,16 +68,10 @@
         transform: rotate(180deg);
       }
     }
+  }
 
-    .team-acco__content {
-      height: auto;
-      margin-bottom: rem(5px);
-      overflow: auto;
-
-      @include tablets {
-        flex-direction: column;
-      }
-    }
+  @include tablets {
+    align-items: center;
   }
 }
 
@@ -90,6 +82,7 @@
   font-family: $gagalin;
   color: $white;
   text-transform: uppercase;
+  cursor: pointer;
 
   @include tablets {
     font-size: 24px;
@@ -106,13 +99,18 @@
   }
 }
 
+.team-acco__content-wrapper {
+  margin-top: rem(15px);
+  height: 0;
+  overflow-y: hidden;
+  transition: height 0.3s;
+}
+
 .team-acco__content {
   display: flex;
-  height: 0;
-  margin-top: rem(15px);
-  overflow: hidden;
 
   @include tablets {
+    flex-direction: column;
     text-align: center;
   }
 }
@@ -120,7 +118,7 @@
 .team-acco__image {
   display: flex;
   justify-content: center;
-  
+
   @include tablets {
     margin-bottom: 20px;
   }

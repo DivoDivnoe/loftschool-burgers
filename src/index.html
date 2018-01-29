@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Title</title>
+  <title>Мистер Бургер</title>
   <link rel="stylesheet" href="css/style.min.css">
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script>
@@ -13,8 +13,10 @@
 
 <body>
   <main class="wrapper">
+    <h1 class="visuallyhidden">Сайт Мистер Бургер</h1>
     <div class="maincontent">
       <section class="banner section section--active">
+        <h2 class="visuallyhidden">Баннер</h2>
         <div class="section__wrapper banner__wrapper">
           <header class="header">
             <div class="header__logo-wrapper">
@@ -22,60 +24,36 @@
             </div>
             <div class="header__btns">
               <nav class="main-nav">
-                <ul class="main-nav__list">
-                  <li class="main-nav__item">
-                    <a class="main-nav__link" href="#" data-section="1">о нас</a>
-                  </li>
-                  <li class="main-nav__item">
-                    <a class="main-nav__link" href="#" data-section="2">бургеры</a>
-                  </li>
-                  <li class="main-nav__item">
-                    <a class="main-nav__link" href="#" data-section="3">команда</a>
-                  </li>
-                  <li class="main-nav__item">
-                    <a class="main-nav__link" href="#" data-section="4">меню</a>
-                  </li>
-                  <li class="main-nav__item">
-                    <a class="main-nav__link" href="#" data-section="5">отзывы</a>
-                  </li>
-                  <li class="main-nav__item">
-                    <a class="main-nav__link" href="#" data-section="7">контакты</a>
-                  </li>
-                </ul>
-              </nav>
-              <a class="main-nav__btn main-nav__link" href="#" data-section="6">Заказать</a>
-              <div class="main-nav__hamburger">
-                <span class="main-nav__hamburger-line"></span>
-                <span class="main-nav__hamburger-line"></span>
-                <span class="main-nav__hamburger-line"></span>
-              </div>
-            </div>
-            <div class="fullscreen-menu">
-              <section class="fullscreen-menu__wrapper">
-                <div class="section__wrapper">
-                  <a href="#" class="hamburger-menu__close"></a>
-                  <ul class="fullscreen-menu__list">
-                    <li class="fullscreen-menu__item">
-                      <a href="#" class="fullscreen-menu__link">Почему мы</a>
+                <div class="main-nav__hamburger">
+                  <span class="main-nav__hamburger-line"></span>
+                  <span class="main-nav__hamburger-line"></span>
+                  <span class="main-nav__hamburger-line"></span>
+                </div>
+                <div class="main-nav__menu">
+                  <a class="main-nav__menu-close"></a>
+                  <ul class="main-nav__list">
+                    <li class="main-nav__item">
+                      <a class="main-nav__link" href="#" data-section="1">о нас</a>
                     </li>
-                    <li class="fullscreen-menu__item">
-                      <a href="#" class="fullscreen-menu__link">Меню</a>
+                    <li class="main-nav__item">
+                      <a class="main-nav__link" href="#" data-section="2">бургеры</a>
                     </li>
-                    <li class="fullscreen-menu__item">
-                      <a href="#" class="fullscreen-menu__link">Советы</a>
+                    <li class="main-nav__item">
+                      <a class="main-nav__link" href="#" data-section="3">команда</a>
                     </li>
-                    <li class="fullscreen-menu__item">
-                      <a href="#" class="fullscreen-menu__link">Кто мы</a>
+                    <li class="main-nav__item">
+                      <a class="main-nav__link" href="#" data-section="4">меню</a>
                     </li>
-                    <li class="fullscreen-menu__item">
-                      <a href="#" class="fullscreen-menu__link">Свяжитесь с нами</a>
+                    <li class="main-nav__item">
+                      <a class="main-nav__link" href="#" data-section="5">отзывы</a>
                     </li>
-                    <li class="fullscreen-menu__item">
-                      <a href="#" class="fullscreen-menu__link">Контакты</a>
+                    <li class="main-nav__item">
+                      <a class="main-nav__link" href="#" data-section="7">контакты</a>
                     </li>
                   </ul>
                 </div>
-              </section>
+              </nav>
+              <a class="main-nav__btn main-nav__link" href="#" data-section="6">Заказать</a>
             </div>
           </header>
           <div class="banner-item">
@@ -108,9 +86,9 @@
                 </svg>
               </div>
               <div class="promo__content">
-                <h2 class="promo__title">
+                <h3 class="promo__title">
                   100% свежее мясо
-                </h2>
+                </h3>
                 <div class="promo__description">
                   <p>
                     Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.
@@ -128,9 +106,9 @@
                 </svg>
               </div>
               <div class="promo__content">
-                <h2 class="promo__title">
+                <h3 class="promo__title">
                   Ручная сборка
-                </h2>
+                </h3>
                 <div class="promo__description">
                   <p>
                     Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский
@@ -149,9 +127,9 @@
                 </svg>
               </div>
               <div class="promo__content">
-                <h2 class="promo__title">
+                <h3 class="promo__title">
                   Натуральные ингредиенты
-                </h2>
+                </h3>
                 <div class="promo__description">
                   <p>
                     Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.
@@ -164,10 +142,13 @@
         </div>
       </section>
       <section class="slider section">
+        <h2 class="visuallyhidden">Наши хиты</h2>
         <div class="section__wrapper slider__wrapper">
-          <svg class="slider__arrow slider__arrow--left" tabindex="0">
-            <use xlink:href="img/icons/sprite.svg#arrow-scroll"></use>
-          </svg>
+          <button class="slider__arrow slider__arrow--left" tabindex="0">
+            <svg class="slider__arrow-icon slider__arrow-icon--left">
+              <use xlink:href="img/icons/sprite.svg#arrow-scroll"></use>
+            </svg>
+          </button>
           <div class="slider__content">
             <ul class="slider__list">
               <li class="slider__item slider__item--active">
@@ -239,7 +220,7 @@
                   </div>
 
                   <div class="slider__image">
-                    <img class="slider__pic" src="img/content/burger-slider.png" alt="hit" class="slider__pic">
+                    <img class="slider__pic" src="img/content/burger-slider.png" alt="hit">
                   </div>
 
                 </div>
@@ -332,7 +313,7 @@
                   </div>
 
                   <div class="slider__image">
-                    <img class="slider__pic" src="img/content/burger-slider.png" alt="hit" class="slider__pic">
+                    <img class="slider__pic" src="img/content/burger-slider.png" alt="hit">
                   </div>
 
                 </div>
@@ -425,7 +406,7 @@
                   </div>
 
                   <div class="slider__image">
-                    <img class="slider__pic" src="img/content/burger-slider.png" alt="hit" class="slider__pic">
+                    <img class="slider__pic" src="img/content/burger-slider.png" alt="hit">
                   </div>
 
                 </div>
@@ -451,9 +432,11 @@
               </li>
             </ul>
           </div>
-          <svg class="slider__arrow slider__arrow--right" tabindex="0">
-            <use xlink:href="img/icons/sprite.svg#arrow-scroll"></use>
-          </svg>
+          <button class="slider__arrow slider__arrow--right" tabindex="0">
+            <svg class="slider__arrow-icon slider__arrow-icon--right">
+              <use xlink:href="img/icons/sprite.svg#arrow-scroll"></use>
+            </svg>
+          </button>
         </div>
       </section>
       <section class="team section">
@@ -468,42 +451,46 @@
                   <div class="team-acco__title">
                     Дэниэл Редклиф
                   </div>
-                  <div class="team-acco__content">
-                    <div class="team-acco__image">
-                      <div class="team-acco__avatar">
-                        <img src="img/content/operator.jpg" alt="Оператор" class="team-acco__pic">
+                  <div class="team-acco__content-wrapper">
+                    <div class="team-acco__content">
+                      <div class="team-acco__image">
+                        <div class="team-acco__avatar">
+                          <img src="img/content/operator.jpg" alt="Оператор" class="team-acco__pic">
+                        </div>
                       </div>
-                    </div>
-                    <div class="team-acco__desc">
-                      <div class="team-acco__desc-title">
-                        Оператор
-                      </div>
-                      <div class="team-acco__desc-text">
-                        <p>
-                          С радостью поможет подобрать идеальный бургер и оформить заказ.
-                        </p>
+                      <div class="team-acco__desc">
+                        <div class="team-acco__desc-title">
+                          Оператор
+                        </div>
+                        <div class="team-acco__desc-text">
+                          <p>
+                            С радостью поможет подобрать идеальный бургер и оформить заказ.
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </li>
-                <li class="team-acco__item team-acco__item--active">
+                <li class="team-acco__item">
                   <div class="team-acco__title">
                     Ричард Джеймс
                   </div>
-                  <div class="team-acco__content">
-                    <div class="team-acco__image">
-                      <div class="team-acco__avatar">
-                        <img src="img/content/operator.jpg" alt="Оператор" class="team-acco__pic">
+                  <div class="team-acco__content-wrapper">
+                    <div class="team-acco__content">
+                      <div class="team-acco__image">
+                        <div class="team-acco__avatar">
+                          <img src="img/content/operator.jpg" alt="Оператор" class="team-acco__pic">
+                        </div>
                       </div>
-                    </div>
-                    <div class="team-acco__desc">
-                      <div class="team-acco__desc-title">
-                        Оператор
-                      </div>
-                      <div class="team-acco__desc-text">
-                        <p>
-                          С радостью поможет подобрать идеальный бургер и оформить заказ.
-                        </p>
+                      <div class="team-acco__desc">
+                        <div class="team-acco__desc-title">
+                          Оператор
+                        </div>
+                        <div class="team-acco__desc-text">
+                          <p>
+                            С радостью поможет подобрать идеальный бургер и оформить заказ.
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -512,20 +499,22 @@
                   <div class="team-acco__title">
                     Джейк Финн
                   </div>
-                  <div class="team-acco__content">
-                    <div class="team-acco__image">
-                      <div class="team-acco__avatar">
-                        <img src="img/content/operator.jpg" alt="Оператор" class="team-acco__pic">
+                  <div class="team-acco__content-wrapper">
+                    <div class="team-acco__content">
+                      <div class="team-acco__image">
+                        <div class="team-acco__avatar">
+                          <img src="img/content/operator.jpg" alt="Оператор" class="team-acco__pic">
+                        </div>
                       </div>
-                    </div>
-                    <div class="team-acco__desc">
-                      <div class="team-acco__desc-title">
-                        Оператор
-                      </div>
-                      <div class="team-acco__desc-text">
-                        <p>
-                          С радостью поможет подобрать идеальный бургер и оформить заказ.
-                        </p>
+                      <div class="team-acco__desc">
+                        <div class="team-acco__desc-title">
+                          Оператор
+                        </div>
+                        <div class="team-acco__desc-text">
+                          <p>
+                            С радостью поможет подобрать идеальный бургер и оформить заказ.
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -534,20 +523,22 @@
                   <div class="team-acco__title">
                     Николай Иванов
                   </div>
-                  <div class="team-acco__content">
-                    <div class="team-acco__image">
-                      <div class="team-acco__avatar">
-                        <img src="img/content/operator.jpg" alt="Оператор" class="team-acco__pic">
+                  <div class="team-acco__content-wrapper">
+                    <div class="team-acco__content">
+                      <div class="team-acco__image">
+                        <div class="team-acco__avatar">
+                          <img src="img/content/operator.jpg" alt="Оператор" class="team-acco__pic">
+                        </div>
                       </div>
-                    </div>
-                    <div class="team-acco__desc">
-                      <div class="team-acco__desc-title">
-                        Оператор
-                      </div>
-                      <div class="team-acco__desc-text">
-                        <p>
-                          С радостью поможет подобрать идеальный бургер и оформить заказ.
-                        </p>
+                      <div class="team-acco__desc">
+                        <div class="team-acco__desc-title">
+                          Оператор
+                        </div>
+                        <div class="team-acco__desc-text">
+                          <p>
+                            С радостью поможет подобрать идеальный бургер и оформить заказ.
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -558,27 +549,28 @@
         </div>
       </section>
       <section class="menu section">
-        <div class="menu__title">
+        <h2 class="menu__title">
           Меню
-        </div>
+        </h2>
         <div class="menu-acco">
-          <div class="menu-acco__item">
+          <div class="menu-acco__item  menu-acco__item--meat">
             <div class="menu-acco__heading menu-acco__heading--meat">
               <div class="menu-acco__title">
                 Для мясоедов
               </div>
             </div>
-            <div class="menu-acco__content">
-              <p>
-                Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений.
-                Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову,
-                однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно
-                выбирает метр. Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует
-                конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник
-                стал особенно чутко относиться к слову.
+            <div class="menu-acco__content-wrapper">
+              <div class="menu-acco__content">
+                <p>
+                  Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений.
+                  Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову,
+                  однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно
+                  выбирает метр. Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует
+                  конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник
+                  стал особенно чутко относиться к слову.
 
-              </p>
-              <a href="#" class="menu-acco__close"></a>
+                </p>
+              </div>
             </div>
           </div>
           <div class="menu-acco__item menu-acco__item--veg">
@@ -588,17 +580,18 @@
               </div>
             </div>
 
-            <div class="menu-acco__content">
-              <p>
-                Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений.
-                Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову,
-                однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно
-                выбирает метр. Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует
-                конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник
-                стал особенно чутко относиться к слову.
+            <div class="menu-acco__content-wrapper">
+              <div class="menu-acco__content">
+                <p>
+                  Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений.
+                  Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову,
+                  однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно
+                  выбирает метр. Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует
+                  конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник
+                  стал особенно чутко относиться к слову.
 
-              </p>
-              <a href="#" class="menu-acco__close"></a>
+                </p>
+              </div>
             </div>
           </div>
           <div class="menu-acco__item menu-acco__item--diet">
@@ -608,22 +601,24 @@
               </div>
             </div>
 
-            <div class="menu-acco__content">
-              <p>
-                Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений.
-                Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову,
-                однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно
-                выбирает метр. Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует
-                конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник
-                стал особенно чутко относиться к слову.
+            <div class="menu-acco__content-wrapper">
+              <div class="menu-acco__content">
+                <p>
+                  Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений.
+                  Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову,
+                  однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно
+                  выбирает метр. Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует
+                  конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник
+                  стал особенно чутко относиться к слову.
 
-              </p>
-              <a href="#" class="menu-acco__close"></a>
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
       <section class="reviews section">
+        <h2 class="visuallyhidden">Отзывы о нас</h2>
         <ul class="reviews__list">
           <li class="reviews__item" style="background-image: url('img/content/review-1.jpg')">
             <img class="reviews__item-image" src="img/content/review-1.jpg" alt="reviewer-1">
@@ -730,8 +725,15 @@
             </div>
           </li>
         </ul>
+        <div class="reviews__modal-wrapper">
+          <div class="reviews__modal">
+            <div class="reviews__modal-content"></div>
+            <a href="#" class="reviews-modal__close"></a>
+          </div>
+        </div>
       </section>
       <section class="order section">
+        <h2 class="visuallyhidden">Заказ доставки</h2>
         <div class="section__wrapper order__wrapper">
           <div class="order__title">
             Закажите доставку
@@ -803,7 +805,7 @@
                     </label>
                     <div class="form__buttons">
                       <button class="form__submit" type="submit">Заказать</button>
-                      <button type="reset" class="form__clear" href="#">Очистить</button>
+                      <button type="reset" class="form__clear">Очистить</button>
                     </div>
                   </div>
 
@@ -820,8 +822,10 @@
         </div>
       </section>
       <section class="map section">
-        <div class="map__image">
-
+        <h2 class="visuallyhidden">Наши контакты</h2>
+        <div class="map__wrapper">
+          <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60898.07759357901!2d30.439955548767553!3d59.88696885845701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46962fccc4c0512b%3A0xad34528f97d3c3e8!2z0YPQuy4g0JHQsNCx0YPRiNC60LjQvdCwLCAxMiwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5MjAyOQ!5e0!3m2!1sru!2sru!4v1517225527135"
+            allowfullscreen></iframe>
         </div>
         <footer class="footer">
           <div class="section__wrapper footer__container">

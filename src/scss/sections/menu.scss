@@ -18,66 +18,30 @@
   bottom: 0;
   right: 0;
   display: flex;
-  justify-content: flex-end;
-
-  @include tablets{
-    left: 0;
-  }
 }
 
 .menu-acco__item {
   display: flex;
   color: $white;
   cursor: pointer;
-  transition: width 1s ease;
 
   &--active {
     .menu-acco__title {
       color: $yellow;
     }
-
-    .menu-acco__close {
-      @include phones {
-        top: 26px;
-      }
-    }
-
-    @include tablets {
-      flex: 1;
-      position: relative;
-    }
-
-    @include phones {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 100vw;
-      height: 100vh;
-      z-index: 100;
-    }
-
-    .menu-acco__content {
-      width: rem(540px);
-      background: rgba($grey, 0.9);
-
-      @include tablets {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 80px;
-        width: auto;
-      }
-    }
   }
 }
 
-.menu-acco__content {
+.menu-acco__content-wrapper {
   width: 0;
+  overflow: hidden;
+  transition: width 0.3s;
+}
+
+.menu-acco__content {
   height: 100%;
   line-height: 1.71;
-  overflow: hidden;
-  transition: all 0.3s ease;
+  background: rgba($grey, 0.9);
 
   p {
     margin: 0;
@@ -91,7 +55,7 @@
 
 .menu-acco__close {
   @include close(-99999px, 26px, 20px, 3px);
-  
+
   @include phones {
     //display: block;
   }
