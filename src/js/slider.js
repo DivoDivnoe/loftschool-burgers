@@ -35,7 +35,7 @@ const initSlider = () => {
   };
 
   const slideEventHandler = evt => {
-    const target = $(evt.target);
+    const target = $(evt.currentTarget);
     let index;
 
     if (target.hasClass('slider__arrow--right')) {
