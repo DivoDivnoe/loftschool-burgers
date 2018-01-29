@@ -63,6 +63,7 @@ const initOnePageScroll = () => {
   const switches = switcher.find('.section-switch__item');
   const offsets = sections.map((index, section) => $(section).offset().top);
   const duration = +content.css('transition-duration').slice(0, -1) * 1000;
+  const arrowDown = $('.banner__arrow');
 
   const slider = new Slider({
     length: sections.length
@@ -256,6 +257,7 @@ const initOnePageScroll = () => {
 
   links.on('click', clickLinkHandler);
   switches.on('click', clickSwitchHandler);
+  arrowDown.on('click', () => slider.slideTo(1));
 
   if ($(window).height() >= 750) {
     wrapper.addClass('wrapper--active');
