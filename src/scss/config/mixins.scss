@@ -1,0 +1,92 @@
+@mixin circle($width, $color) {
+  width: $width;
+  height: $width;
+  border-radius: 50%;
+  background-color: $color;
+}
+
+@mixin btn($color: $red, $hover: $darkRed) {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: rem(8px) rem(15px);
+  font-weight: 500;
+  font-size: rem(13px);
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: $color;
+  border-radius: rem(5px);
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $hover;
+  }
+}
+
+@mixin title($color: $yellow) {
+  font-family: $gagalin;
+  font-size: rem(72px);
+  color: $color;
+}
+
+@mixin ubuntu($style: light) {
+  font-family: Ubuntu, Helvetica, Arial, sans-serif;
+
+  @if $style == light {
+    font-weight: 300;
+  }
+
+  @if $style == medium {
+    font-weight: 500;
+  }
+
+  @if $style == bold {
+    font-weight: 700;
+  }
+}
+
+@mixin placecolor($color: #000000) {
+	&::-webkit-input-placeholder {
+		color: $color;
+	}
+	&:-moz-placeholder {
+		color: $color;
+	}
+	&::-moz-placeholder {
+		color: $color;
+	}
+	&:-ms-input-placeholder {
+		color: $color;
+	}
+}
+
+@mixin close($top, $right, $height, $width) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  display: block;
+  width: $height;
+  height: $height;
+  cursor: default;
+
+  &::before, &::after {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: $height;
+    width: $width;
+    border-radius: 3px;
+    background-color: #c1c2c2;
+    transform: translate(-50%);
+    transform-origin: center;
+    content: '';
+  }
+
+  &::before {
+      transform: rotate(45deg);
+  }
+  &::after {
+    transform: rotate(-45deg);
+  }
+}

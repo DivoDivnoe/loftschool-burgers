@@ -1,0 +1,133 @@
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo-wrapper {
+  margin-top: rem(13px);
+}
+
+.header__logo {
+  position: relative;
+  max-width: 100%;
+  z-index: 500;
+}
+
+.header__btns {
+  display: flex;
+  align-items: center;
+}
+
+.main-nav__menu {
+  display: flex;
+  align-items: center;
+  margin-right: rem(15px);
+  font-weight: 500;
+  font-size: rem(13px);
+  transition: visibility 1s;
+
+  @include tablets {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    margin-right: 0;
+    background-color: rgba($grey, 0.9);
+    z-index: 100;
+  }
+}
+
+.main-nav__menu-close {
+  @include close(30px, 19px, 23px, 4px);
+  display: none;
+
+  @include tablets {
+    display: block;
+  }
+}
+
+.main-nav__list {
+  display: flex;
+  align-items: center;
+
+  @include tablets {
+    flex-direction: column;
+    justify-content: center;
+    height: 90%;
+  }
+}
+
+.main-nav__item {
+  display: flex;
+  align-items: center;
+
+  &::after {
+    content: '';
+    margin-left: rem(16px);
+    margin-right: rem(16px);
+    @include circle(rem(4px), $white);
+  }
+
+  &:last-child::after {
+    display: none;
+  }
+
+  @include tablets {
+    flex-direction: column;
+
+    &::after {
+      @include circle(7px, $white);
+      display: block;
+      margin: 16px 0;
+    }
+  }
+}
+
+.main-nav__link {
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  @include tablets {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: calc(40 / 24);
+  }
+}
+
+.main-nav__btn {
+  @include btn;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.main-nav__hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: rem(24px);
+  height: rem(24px);
+  cursor: pointer;
+
+  @include tablets {
+    display: flex;
+    margin-left: 30px;
+    margin-right: 7px;
+  }
+}
+
+.main-nav__hamburger-line {
+  width: 100%;
+  height: rem(4px);
+  border-radius: rem(3px);
+  background-color: $white;
+}

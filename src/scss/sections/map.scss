@@ -1,0 +1,15 @@
+.map {
+  display: flex;
+  flex-direction: column;
+}
+
+.map__wrapper {
+  flex: 1;
+  background: url('../img/bg/map.jpg') center top no-repeat;
+  background-size: cover;
+}
+
+.map__iframe {
+  width: 100%;
+  height: 100%;
+}
