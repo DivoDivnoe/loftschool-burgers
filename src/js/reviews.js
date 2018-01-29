@@ -18,8 +18,8 @@ const initReviewsPopup = () => {
   });
 
   items.on('click', evt => {
-    const target = $(evt.target);
-    const name = target.closest('.reviews__item').find('.reviews__name');
+    const target = $(evt.currentTarget);
+    const name = target.find('.reviews__name');
     const text = name.next();
 
     modalWrapper.addClass('reviews__modal-wrapper--active');
